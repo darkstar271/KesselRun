@@ -36,7 +36,7 @@
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.btnStart = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
-            this.btnBets = new System.Windows.Forms.Button();
+            this.btnWager = new System.Windows.Forms.Button();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
@@ -112,6 +112,7 @@
             this.btnStart.TabIndex = 6;
             this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.BtnStart_Click);
             // 
             // btnReset
             // 
@@ -121,15 +122,17 @@
             this.btnReset.TabIndex = 7;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.BtnStart_Click);
             // 
-            // btnBets
+            // btnWager
             // 
-            this.btnBets.Location = new System.Drawing.Point(281, 463);
-            this.btnBets.Name = "btnBets";
-            this.btnBets.Size = new System.Drawing.Size(75, 23);
-            this.btnBets.TabIndex = 8;
-            this.btnBets.Text = "Wager";
-            this.btnBets.UseVisualStyleBackColor = true;
+            this.btnWager.Location = new System.Drawing.Point(281, 463);
+            this.btnWager.Name = "btnWager";
+            this.btnWager.Size = new System.Drawing.Size(75, 23);
+            this.btnWager.TabIndex = 8;
+            this.btnWager.Text = "Wager";
+            this.btnWager.UseVisualStyleBackColor = true;
+            this.btnWager.Click += new System.EventHandler(this.BtnStart_Click);
             // 
             // radioButton1
             // 
@@ -186,7 +189,7 @@
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.btnBets);
+            this.Controls.Add(this.btnWager);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.numericUpDown2);
@@ -218,7 +221,7 @@
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button btnReset;
-        private System.Windows.Forms.Button btnBets;
+        private System.Windows.Forms.Button btnWager;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;

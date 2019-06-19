@@ -16,5 +16,40 @@ namespace KesselRun
         {
             InitializeComponent();
         }
+
+        private void BtnStart_Click(object sender, EventArgs e)
+        {
+            Button fakeButton = (Button) sender;
+            ButtonSwitch(fakeButton.Name);
+        }
+
+
+        public void ButtonSwitch(string ButNum)
+
+        {
+            {
+                switch (ButNum)
+                {
+                    case "btnStart":
+
+                        break;
+                    case "btnReset":
+                        break;
+                    case "btnWager":
+                        break;
+                    case "4":
+                        break;
+                }
+
+
+
+
+
+            }
+
+
+
+        }
+
     }
 }
