@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Business\AllPunters\Creedo.cs" />
     <Compile Include="Business\AllPunters\Jubba the hutt.cs" />
+    <Compile Include="Business\AllPunters\Punter.cs" />
     <Compile Include="Business\AllPunters\Snoke.cs" />
     <Compile Include="Business\AllPunters\Watto.cs" />
     <Compile Include="Business\Factory.cs" />

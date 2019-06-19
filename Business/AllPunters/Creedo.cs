@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace KesselRun.Business.AllPunters
 {
-    class Creedo
+    class Creedo : Punter
+
     {
+
+        public Creedo()
+        {
+            PunterName = "Creedo";
+            Ships = "";
+            Cash = 100;
+
+
+
+        }
+
+
+
     }
 }
