@@ -42,6 +42,7 @@
             this.RbJubba = new System.Windows.Forms.RadioButton();
             this.RbCreedo = new System.Windows.Forms.RadioButton();
             this.lblWagerName = new System.Windows.Forms.Label();
+            this.lblWinner = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Pb1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pb2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pb3)).BeginInit();
@@ -52,7 +53,7 @@
             // 
             // Pb1
             // 
-            this.Pb1.BackColor = System.Drawing.Color.Transparent;
+            this.Pb1.BackColor = System.Drawing.SystemColors.Control;
             this.Pb1.BackgroundImage = global::KesselRun.Resource1.Millenium_Falcon_920x518;
             this.Pb1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Pb1.Location = new System.Drawing.Point(12, 12);
@@ -93,21 +94,26 @@
             // 
             // UdBet
             // 
-            this.UdBet.Location = new System.Drawing.Point(833, 345);
+            this.UdBet.Location = new System.Drawing.Point(811, 525);
             this.UdBet.Name = "UdBet";
             this.UdBet.Size = new System.Drawing.Size(120, 20);
             this.UdBet.TabIndex = 4;
+            this.UdBet.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(833, 399);
+            this.numericUpDown2.Location = new System.Drawing.Point(811, 579);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown2.TabIndex = 5;
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(38, 463);
+            this.btnStart.Location = new System.Drawing.Point(14, 612);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(75, 23);
             this.btnStart.TabIndex = 6;
@@ -117,7 +123,7 @@
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(153, 463);
+            this.btnReset.Location = new System.Drawing.Point(129, 612);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(75, 23);
             this.btnReset.TabIndex = 7;
@@ -127,7 +133,7 @@
             // 
             // btnWager
             // 
-            this.btnWager.Location = new System.Drawing.Point(281, 463);
+            this.btnWager.Location = new System.Drawing.Point(257, 612);
             this.btnWager.Name = "btnWager";
             this.btnWager.Size = new System.Drawing.Size(75, 23);
             this.btnWager.TabIndex = 8;
@@ -138,7 +144,7 @@
             // RbWatto
             // 
             this.RbWatto.AutoSize = true;
-            this.RbWatto.Location = new System.Drawing.Point(397, 469);
+            this.RbWatto.Location = new System.Drawing.Point(378, 652);
             this.RbWatto.Name = "RbWatto";
             this.RbWatto.Size = new System.Drawing.Size(54, 17);
             this.RbWatto.TabIndex = 9;
@@ -150,51 +156,63 @@
             // RbSnoke
             // 
             this.RbSnoke.AutoSize = true;
-            this.RbSnoke.Location = new System.Drawing.Point(395, 423);
+            this.RbSnoke.Location = new System.Drawing.Point(376, 606);
             this.RbSnoke.Name = "RbSnoke";
             this.RbSnoke.Size = new System.Drawing.Size(56, 17);
             this.RbSnoke.TabIndex = 10;
             this.RbSnoke.TabStop = true;
             this.RbSnoke.Text = "Snoke";
             this.RbSnoke.UseVisualStyleBackColor = true;
+            this.RbSnoke.CheckedChanged += new System.EventHandler(this.RbWatto_CheckedChanged);
             // 
             // RbJubba
             // 
             this.RbJubba.AutoSize = true;
-            this.RbJubba.Location = new System.Drawing.Point(395, 382);
+            this.RbJubba.Location = new System.Drawing.Point(376, 565);
             this.RbJubba.Name = "RbJubba";
             this.RbJubba.Size = new System.Drawing.Size(54, 17);
             this.RbJubba.TabIndex = 11;
             this.RbJubba.TabStop = true;
             this.RbJubba.Text = "Jubba";
             this.RbJubba.UseVisualStyleBackColor = true;
+            this.RbJubba.CheckedChanged += new System.EventHandler(this.RbWatto_CheckedChanged);
             // 
             // RbCreedo
             // 
             this.RbCreedo.AutoSize = true;
-            this.RbCreedo.Location = new System.Drawing.Point(392, 345);
+            this.RbCreedo.Location = new System.Drawing.Point(373, 528);
             this.RbCreedo.Name = "RbCreedo";
             this.RbCreedo.Size = new System.Drawing.Size(59, 17);
             this.RbCreedo.TabIndex = 12;
             this.RbCreedo.TabStop = true;
             this.RbCreedo.Text = "Creedo";
             this.RbCreedo.UseVisualStyleBackColor = true;
+            this.RbCreedo.CheckedChanged += new System.EventHandler(this.RbWatto_CheckedChanged);
             // 
             // lblWagerName
             // 
-            this.lblWagerName.Location = new System.Drawing.Point(466, 345);
+            this.lblWagerName.Location = new System.Drawing.Point(447, 528);
             this.lblWagerName.Name = "lblWagerName";
             this.lblWagerName.Size = new System.Drawing.Size(238, 141);
             this.lblWagerName.TabIndex = 13;
             this.lblWagerName.Text = "label1";
             // 
+            // lblWinner
+            // 
+            this.lblWinner.AutoSize = true;
+            this.lblWinner.Location = new System.Drawing.Point(54, 565);
+            this.lblWinner.Name = "lblWinner";
+            this.lblWinner.Size = new System.Drawing.Size(35, 13);
+            this.lblWinner.TabIndex = 14;
+            this.lblWinner.Text = "label1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::KesselRun.Resource1.starry_sky_night_stars_115042_1920x1080;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1318, 617);
+            this.ClientSize = new System.Drawing.Size(1318, 695);
+            this.Controls.Add(this.lblWinner);
             this.Controls.Add(this.lblWagerName);
             this.Controls.Add(this.RbCreedo);
             this.Controls.Add(this.RbJubba);
@@ -238,6 +256,7 @@
         private System.Windows.Forms.RadioButton RbJubba;
         private System.Windows.Forms.RadioButton RbCreedo;
         private System.Windows.Forms.Label lblWagerName;
+        private System.Windows.Forms.Label lblWinner;
     }
 }
 

@@ -63,6 +63,16 @@ namespace KesselRun {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1 {
+            get {
+                object obj = ResourceManager.GetObject("_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _68_960x600 {
             get {
                 object obj = ResourceManager.GetObject("_68_960x600", resourceCulture);
@@ -83,6 +93,26 @@ namespace KesselRun {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Agor {
+            get {
+                object obj = ResourceManager.GetObject("Agor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Igor {
+            get {
+                object obj = ResourceManager.GetObject("Igor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap KesselRunMap {
             get {
                 object obj = ResourceManager.GetObject("KesselRunMap", resourceCulture);
@@ -96,6 +126,16 @@ namespace KesselRun {
         internal static System.Drawing.Bitmap Millenium_Falcon_920x518 {
             get {
                 object obj = ResourceManager.GetObject("Millenium_Falcon_920x518", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ogor {
+            get {
+                object obj = ResourceManager.GetObject("Ogor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -146,6 +186,16 @@ namespace KesselRun {
         internal static System.Drawing.Bitmap stars_universe_space_118205_1920x1080 {
             get {
                 object obj = ResourceManager.GetObject("stars_universe_space_118205_1920x1080", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ugor {
+            get {
+                object obj = ResourceManager.GetObject("Ugor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

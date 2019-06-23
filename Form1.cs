@@ -18,15 +18,21 @@ namespace KesselRun
         Ships[] ships = new Ships[4];
         Punter[] myPunter = new Punter[4];
         Punter CurrantPunter = new Snoke();
+
+        private string ShipWinner;
         public Form1()
         {
             InitializeComponent();
-            LoadPunters();
             LoadShips();
+            LoadPunters();
+
+            
+
         }
 
-        #region Radio & Button Switch
         // this is a fake button and switch for all buttons
+        #region Buttons & switch method
+
         private void BtnStart_Click(object sender, EventArgs e)
         {
             Button fakeButton = (Button)sender;
@@ -39,6 +45,7 @@ namespace KesselRun
                 switch (ButNum)
                 {
                     case "btnStart":
+                        Parsec();
                         // HyperSpace();
                         break;
                     case "btnReset":
@@ -53,8 +60,11 @@ namespace KesselRun
                 }
             }
         }
+        #endregion
 
         // this is a fake radio button and switch for all radio buttons
+        #region Radio buttons & switch method
+
         private void RbWatto_CheckedChanged(object sender, EventArgs e)
         {
             RadioButton fakeRb = new RadioButton();
@@ -128,7 +138,7 @@ namespace KesselRun
             for (int i = 0; i < 4; i++)
             {
                 myPunter[i] = Factory.GetAPunter(i);
-                //   myPunter[i].LabelWinner =  lblWinner;
+                myPunter[i].LabelWinner = lblWinner;
             }
 
 
@@ -142,5 +152,45 @@ namespace KesselRun
             ships[2] = new Ships { Lenght = 0, myPB = Pb3, Name = "Slave 1" };
             ships[3] = new Ships { Lenght = 0, myPB = Pb4, Name = "Rage" };
         }
+        #region Win and Lose 
+        private void Parsec()
+        {
+            // while we haven't reached the end then keep looping
+            bool end = false;
+            // create a random number generator
+            Random myRand = new Random();
+            Random myrandstop = new Random();
+            while (end != true)
+
+            {
+                for (int i = 0; i < 4; i++)
+
+                {
+                    ships[i].myPB.Left += myRand.Next(1, 11);
+                    //50% of the time it takes 8 off the left which makes it go back
+                    if (myrandstop.Next(1, 3) == 2)
+                    {
+                        ships[i].myPB.Left -= 4;
+                    }
+                    // if the monster reaches the end of the form 
+                    if (ships[i].myPB.Left > Form1.ActiveForm.Width - ships[i].myPB.Width - 40)
+                    {
+                        end = true; // loop until end = true
+                        this.Text = ships[i].Name + " the Ship has won";
+                        // this is the ship that won
+                        ShipWinner = ships[i].Name;
+
+                    }
+
+
+
+                }
+
+            }
+
+        }
+        #endregion
+
+
     }
 }
