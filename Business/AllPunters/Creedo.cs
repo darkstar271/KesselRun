@@ -13,7 +13,7 @@ namespace KesselRun.Business.AllPunters
         public Creedo()
         {
             PunterName = "Creedo";
-            Ships = "";
+            Ships = 0;
             Cash = 100;
 
 

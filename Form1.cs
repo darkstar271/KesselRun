@@ -25,8 +25,9 @@ namespace KesselRun
             InitializeComponent();
             LoadShips();
             LoadPunters();
+            PunterCash();
 
-            
+
 
         }
 
@@ -54,6 +55,7 @@ namespace KesselRun
                     case "btnWager":
 
                         Wager();
+                        ShipNum();
                         break;
                     case "4":
                         break;
@@ -83,6 +85,7 @@ namespace KesselRun
 
                     case "RbCreedo":
                         CurrantPunter = myPunter[0];
+                        // lblCreedoCash.Text = myPunter[0].Cash.ToString();
                         break;
 
 
@@ -113,12 +116,32 @@ namespace KesselRun
 
         #endregion
 
+        #region Methods & stuff
+
+
+
+
         private void Wager()
         {
             CurrantPunter.Bet = (float)UdBet.Value;
-            lblWagerName.Text += CurrantPunter.PunterName + " Bets" + CurrantPunter.Bet + Environment.NewLine;
+            lblWagerName.Text += CurrantPunter.PunterName + " Bets " + CurrantPunter.Bet + Environment.NewLine;
         }
 
+        private void PunterCash()
+        {
+            lblCreedoCash.Text = myPunter[0].Cash.ToString();
+            lblJubbaCash.Text = myPunter[1].Cash.ToString();
+            lblSnokeCash.Text = myPunter[2].Cash.ToString();
+            lblWattoCash.Text = myPunter[3].Cash.ToString();
+        }
+        private void ShipNum()
+        {
+            CurrantPunter.Ships = (int)UdShip.Value;
+            lblWagerName.Text += CurrantPunter.PunterName + " Ship " + ships[CurrantPunter.Ships].Name + Environment.NewLine;
+
+
+
+        }
         private void ResetAll()
 
         {
@@ -151,7 +174,10 @@ namespace KesselRun
             ships[1] = new Ships { Lenght = 0, myPB = Pb2, Name = "Scimitar" };
             ships[2] = new Ships { Lenght = 0, myPB = Pb3, Name = "Slave 1" };
             ships[3] = new Ships { Lenght = 0, myPB = Pb4, Name = "Rage" };
+
+            //   string winner = ships[0].Name;
         }
+        #endregion
         #region Win and Lose 
         private void Parsec()
         {
@@ -170,10 +196,10 @@ namespace KesselRun
                     //50% of the time it takes 8 off the left which makes it go back
                     if (myrandstop.Next(1, 3) == 2)
                     {
-                        ships[i].myPB.Left -= 4;
+                        ships[i].myPB.Left -= 1;
                     }
                     // if the monster reaches the end of the form 
-                    if (ships[i].myPB.Left > Form1.ActiveForm.Width - ships[i].myPB.Width - 40)
+                    if (ships[i].myPB.Left > Form1.ActiveForm.Width - ships[i].myPB.Width - 20)
                     {
                         end = true; // loop until end = true
                         this.Text = ships[i].Name + " the Ship has won";

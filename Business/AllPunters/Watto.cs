@@ -11,7 +11,7 @@ namespace KesselRun.Business.AllPunters
         public Watto()
         {
             PunterName = "Watto";
-            Ships = "";
+            Ships = 0;
             Cash = 100;
 
 

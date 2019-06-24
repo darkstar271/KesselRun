@@ -33,7 +33,7 @@
             this.Pb3 = new System.Windows.Forms.PictureBox();
             this.Pb4 = new System.Windows.Forms.PictureBox();
             this.UdBet = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.UdShip = new System.Windows.Forms.NumericUpDown();
             this.btnStart = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnWager = new System.Windows.Forms.Button();
@@ -43,12 +43,23 @@
             this.RbCreedo = new System.Windows.Forms.RadioButton();
             this.lblWagerName = new System.Windows.Forms.Label();
             this.lblWinner = new System.Windows.Forms.Label();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.lblCredits = new System.Windows.Forms.Label();
+            this.lblShipNumber = new System.Windows.Forms.Label();
+            this.lblCreedoCash = new System.Windows.Forms.Label();
+            this.lblJubbaCash = new System.Windows.Forms.Label();
+            this.lblSnokeCash = new System.Windows.Forms.Label();
+            this.lblWattoCash = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Pb1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pb2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pb3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pb4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UdBet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UdShip)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Pb1
@@ -56,9 +67,9 @@
             this.Pb1.BackColor = System.Drawing.SystemColors.Control;
             this.Pb1.BackgroundImage = global::KesselRun.Resource1.Millenium_Falcon_920x518;
             this.Pb1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Pb1.Location = new System.Drawing.Point(12, 12);
+            this.Pb1.Location = new System.Drawing.Point(6, 3);
             this.Pb1.Name = "Pb1";
-            this.Pb1.Size = new System.Drawing.Size(101, 79);
+            this.Pb1.Size = new System.Drawing.Size(100, 79);
             this.Pb1.TabIndex = 0;
             this.Pb1.TabStop = false;
             // 
@@ -66,9 +77,9 @@
             // 
             this.Pb2.BackgroundImage = global::KesselRun.Resource1.Scimitar_BF2;
             this.Pb2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Pb2.Location = new System.Drawing.Point(12, 106);
+            this.Pb2.Location = new System.Drawing.Point(6, 88);
             this.Pb2.Name = "Pb2";
-            this.Pb2.Size = new System.Drawing.Size(101, 79);
+            this.Pb2.Size = new System.Drawing.Size(100, 79);
             this.Pb2.TabIndex = 1;
             this.Pb2.TabStop = false;
             // 
@@ -76,9 +87,9 @@
             // 
             this.Pb3.BackgroundImage = global::KesselRun.Resource1.Slave_1;
             this.Pb3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Pb3.Location = new System.Drawing.Point(12, 203);
+            this.Pb3.Location = new System.Drawing.Point(6, 173);
             this.Pb3.Name = "Pb3";
-            this.Pb3.Size = new System.Drawing.Size(101, 79);
+            this.Pb3.Size = new System.Drawing.Size(100, 79);
             this.Pb3.TabIndex = 2;
             this.Pb3.TabStop = false;
             // 
@@ -86,17 +97,18 @@
             // 
             this.Pb4.BackgroundImage = global::KesselRun.Resource1._68_960x600f;
             this.Pb4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Pb4.Location = new System.Drawing.Point(12, 320);
+            this.Pb4.Location = new System.Drawing.Point(6, 272);
             this.Pb4.Name = "Pb4";
-            this.Pb4.Size = new System.Drawing.Size(101, 79);
+            this.Pb4.Size = new System.Drawing.Size(100, 79);
             this.Pb4.TabIndex = 3;
             this.Pb4.TabStop = false;
             // 
             // UdBet
             // 
-            this.UdBet.Location = new System.Drawing.Point(811, 525);
+            this.UdBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UdBet.Location = new System.Drawing.Point(826, 126);
             this.UdBet.Name = "UdBet";
-            this.UdBet.Size = new System.Drawing.Size(120, 20);
+            this.UdBet.Size = new System.Drawing.Size(120, 26);
             this.UdBet.TabIndex = 4;
             this.UdBet.Value = new decimal(new int[] {
             5,
@@ -104,18 +116,20 @@
             0,
             0});
             // 
-            // numericUpDown2
+            // UdShip
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(811, 579);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown2.TabIndex = 5;
+            this.UdShip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UdShip.Location = new System.Drawing.Point(826, 204);
+            this.UdShip.Name = "UdShip";
+            this.UdShip.Size = new System.Drawing.Size(120, 26);
+            this.UdShip.TabIndex = 5;
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(14, 612);
+            this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStart.Location = new System.Drawing.Point(6, 116);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(75, 23);
+            this.btnStart.Size = new System.Drawing.Size(75, 36);
             this.btnStart.TabIndex = 6;
             this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = true;
@@ -123,9 +137,10 @@
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(129, 612);
+            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.Location = new System.Drawing.Point(170, 15);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(75, 23);
+            this.btnReset.Size = new System.Drawing.Size(75, 36);
             this.btnReset.TabIndex = 7;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = true;
@@ -133,9 +148,10 @@
             // 
             // btnWager
             // 
-            this.btnWager.Location = new System.Drawing.Point(257, 612);
+            this.btnWager.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWager.Location = new System.Drawing.Point(3, 194);
             this.btnWager.Name = "btnWager";
-            this.btnWager.Size = new System.Drawing.Size(75, 23);
+            this.btnWager.Size = new System.Drawing.Size(75, 36);
             this.btnWager.TabIndex = 8;
             this.btnWager.Text = "Wager";
             this.btnWager.UseVisualStyleBackColor = true;
@@ -144,9 +160,10 @@
             // RbWatto
             // 
             this.RbWatto.AutoSize = true;
-            this.RbWatto.Location = new System.Drawing.Point(378, 652);
+            this.RbWatto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RbWatto.Location = new System.Drawing.Point(171, 221);
             this.RbWatto.Name = "RbWatto";
-            this.RbWatto.Size = new System.Drawing.Size(54, 17);
+            this.RbWatto.Size = new System.Drawing.Size(70, 24);
             this.RbWatto.TabIndex = 9;
             this.RbWatto.TabStop = true;
             this.RbWatto.Text = "Watto";
@@ -156,9 +173,10 @@
             // RbSnoke
             // 
             this.RbSnoke.AutoSize = true;
-            this.RbSnoke.Location = new System.Drawing.Point(376, 606);
+            this.RbSnoke.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RbSnoke.Location = new System.Drawing.Point(169, 175);
             this.RbSnoke.Name = "RbSnoke";
-            this.RbSnoke.Size = new System.Drawing.Size(56, 17);
+            this.RbSnoke.Size = new System.Drawing.Size(73, 24);
             this.RbSnoke.TabIndex = 10;
             this.RbSnoke.TabStop = true;
             this.RbSnoke.Text = "Snoke";
@@ -168,9 +186,10 @@
             // RbJubba
             // 
             this.RbJubba.AutoSize = true;
-            this.RbJubba.Location = new System.Drawing.Point(376, 565);
+            this.RbJubba.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RbJubba.Location = new System.Drawing.Point(169, 134);
             this.RbJubba.Name = "RbJubba";
-            this.RbJubba.Size = new System.Drawing.Size(54, 17);
+            this.RbJubba.Size = new System.Drawing.Size(71, 24);
             this.RbJubba.TabIndex = 11;
             this.RbJubba.TabStop = true;
             this.RbJubba.Text = "Jubba";
@@ -180,9 +199,10 @@
             // RbCreedo
             // 
             this.RbCreedo.AutoSize = true;
-            this.RbCreedo.Location = new System.Drawing.Point(373, 528);
+            this.RbCreedo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RbCreedo.Location = new System.Drawing.Point(166, 97);
             this.RbCreedo.Name = "RbCreedo";
-            this.RbCreedo.Size = new System.Drawing.Size(59, 17);
+            this.RbCreedo.Size = new System.Drawing.Size(79, 24);
             this.RbCreedo.TabIndex = 12;
             this.RbCreedo.TabStop = true;
             this.RbCreedo.Text = "Creedo";
@@ -191,20 +211,118 @@
             // 
             // lblWagerName
             // 
-            this.lblWagerName.Location = new System.Drawing.Point(447, 528);
+            this.lblWagerName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.lblWagerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWagerName.Location = new System.Drawing.Point(496, 58);
             this.lblWagerName.Name = "lblWagerName";
-            this.lblWagerName.Size = new System.Drawing.Size(238, 141);
+            this.lblWagerName.Size = new System.Drawing.Size(303, 188);
             this.lblWagerName.TabIndex = 13;
-            this.lblWagerName.Text = "label1";
             // 
             // lblWinner
             // 
-            this.lblWinner.AutoSize = true;
-            this.lblWinner.Location = new System.Drawing.Point(54, 565);
+            this.lblWinner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.lblWinner.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWinner.Location = new System.Drawing.Point(12, 23);
             this.lblWinner.Name = "lblWinner";
-            this.lblWinner.Size = new System.Drawing.Size(35, 13);
+            this.lblWinner.Size = new System.Drawing.Size(140, 66);
             this.lblWinner.TabIndex = 14;
-            this.lblWinner.Text = "label1";
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.BackgroundImage = global::KesselRun.Resource1._1;
+            this.splitContainer1.Panel1.Controls.Add(this.Pb1);
+            this.splitContainer1.Panel1.Controls.Add(this.Pb4);
+            this.splitContainer1.Panel1.Controls.Add(this.Pb2);
+            this.splitContainer1.Panel1.Controls.Add(this.Pb3);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.lblWattoCash);
+            this.splitContainer1.Panel2.Controls.Add(this.lblSnokeCash);
+            this.splitContainer1.Panel2.Controls.Add(this.lblJubbaCash);
+            this.splitContainer1.Panel2.Controls.Add(this.lblCreedoCash);
+            this.splitContainer1.Panel2.Controls.Add(this.lblShipNumber);
+            this.splitContainer1.Panel2.Controls.Add(this.lblCredits);
+            this.splitContainer1.Panel2.Controls.Add(this.UdBet);
+            this.splitContainer1.Panel2.Controls.Add(this.lblWinner);
+            this.splitContainer1.Panel2.Controls.Add(this.btnWager);
+            this.splitContainer1.Panel2.Controls.Add(this.UdShip);
+            this.splitContainer1.Panel2.Controls.Add(this.btnReset);
+            this.splitContainer1.Panel2.Controls.Add(this.lblWagerName);
+            this.splitContainer1.Panel2.Controls.Add(this.btnStart);
+            this.splitContainer1.Panel2.Controls.Add(this.RbCreedo);
+            this.splitContainer1.Panel2.Controls.Add(this.RbWatto);
+            this.splitContainer1.Panel2.Controls.Add(this.RbJubba);
+            this.splitContainer1.Panel2.Controls.Add(this.RbSnoke);
+            this.splitContainer1.Size = new System.Drawing.Size(1318, 695);
+            this.splitContainer1.SplitterDistance = 409;
+            this.splitContainer1.TabIndex = 15;
+            // 
+            // lblCredits
+            // 
+            this.lblCredits.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCredits.Location = new System.Drawing.Point(823, 97);
+            this.lblCredits.Name = "lblCredits";
+            this.lblCredits.Size = new System.Drawing.Size(123, 23);
+            this.lblCredits.TabIndex = 15;
+            this.lblCredits.Text = "Galactic Credits";
+            // 
+            // lblShipNumber
+            // 
+            this.lblShipNumber.AutoSize = true;
+            this.lblShipNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShipNumber.Location = new System.Drawing.Point(826, 166);
+            this.lblShipNumber.Name = "lblShipNumber";
+            this.lblShipNumber.Size = new System.Drawing.Size(97, 20);
+            this.lblShipNumber.TabIndex = 16;
+            this.lblShipNumber.Text = "ShipNumber";
+            // 
+            // lblCreedoCash
+            // 
+            this.lblCreedoCash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblCreedoCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCreedoCash.Location = new System.Drawing.Point(312, 97);
+            this.lblCreedoCash.Name = "lblCreedoCash";
+            this.lblCreedoCash.Size = new System.Drawing.Size(100, 23);
+            this.lblCreedoCash.TabIndex = 17;
+            this.lblCreedoCash.Text = "label1";
+            // 
+            // lblJubbaCash
+            // 
+            this.lblJubbaCash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblJubbaCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJubbaCash.Location = new System.Drawing.Point(312, 134);
+            this.lblJubbaCash.Name = "lblJubbaCash";
+            this.lblJubbaCash.Size = new System.Drawing.Size(100, 23);
+            this.lblJubbaCash.TabIndex = 18;
+            this.lblJubbaCash.Text = "label2";
+            // 
+            // lblSnokeCash
+            // 
+            this.lblSnokeCash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblSnokeCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSnokeCash.Location = new System.Drawing.Point(312, 185);
+            this.lblSnokeCash.Name = "lblSnokeCash";
+            this.lblSnokeCash.Size = new System.Drawing.Size(100, 23);
+            this.lblSnokeCash.TabIndex = 19;
+            this.lblSnokeCash.Text = "label3";
+            // 
+            // lblWattoCash
+            // 
+            this.lblWattoCash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblWattoCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWattoCash.Location = new System.Drawing.Point(312, 221);
+            this.lblWattoCash.Name = "lblWattoCash";
+            this.lblWattoCash.Size = new System.Drawing.Size(100, 23);
+            this.lblWattoCash.TabIndex = 20;
+            this.lblWattoCash.Text = "label4";
             // 
             // Form1
             // 
@@ -212,21 +330,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1318, 695);
-            this.Controls.Add(this.lblWinner);
-            this.Controls.Add(this.lblWagerName);
-            this.Controls.Add(this.RbCreedo);
-            this.Controls.Add(this.RbJubba);
-            this.Controls.Add(this.RbSnoke);
-            this.Controls.Add(this.RbWatto);
-            this.Controls.Add(this.btnWager);
-            this.Controls.Add(this.btnReset);
-            this.Controls.Add(this.btnStart);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.UdBet);
-            this.Controls.Add(this.Pb4);
-            this.Controls.Add(this.Pb3);
-            this.Controls.Add(this.Pb2);
-            this.Controls.Add(this.Pb1);
+            this.Controls.Add(this.splitContainer1);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.Pb1)).EndInit();
@@ -234,9 +338,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.Pb3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pb4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UdBet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UdShip)).EndInit();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -247,7 +355,7 @@
         private System.Windows.Forms.PictureBox Pb3;
         private System.Windows.Forms.PictureBox Pb4;
         private System.Windows.Forms.NumericUpDown UdBet;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown UdShip;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnWager;
@@ -257,6 +365,13 @@
         private System.Windows.Forms.RadioButton RbCreedo;
         private System.Windows.Forms.Label lblWagerName;
         private System.Windows.Forms.Label lblWinner;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.Label lblShipNumber;
+        private System.Windows.Forms.Label lblCredits;
+        private System.Windows.Forms.Label lblWattoCash;
+        private System.Windows.Forms.Label lblSnokeCash;
+        private System.Windows.Forms.Label lblJubbaCash;
+        private System.Windows.Forms.Label lblCreedoCash;
     }
 }
 

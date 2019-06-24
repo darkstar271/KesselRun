@@ -14,7 +14,7 @@ namespace KesselRun.Business.AllPunters
 
         {
             PunterName = "Jubba The Hutt";
-            Ships = "";
+            Ships = 0;
             Cash = 100;
 
 

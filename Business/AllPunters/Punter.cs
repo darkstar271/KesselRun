@@ -12,7 +12,7 @@ namespace KesselRun.Business.AllPunters
     // https://www.infoworld.com/article/2928719/when-to-use-an-abstract-class-vs-interface-in-c.html
     {
         public string PunterName { get; set; }
-        public string Ships { get; set; }
+        public int Ships { get; set; }
         public Single Cash { get; set; }
         public Single Bet { get; set; }
         public Label LabelWinner { get; set; }
