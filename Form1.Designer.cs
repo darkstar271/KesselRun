@@ -44,12 +44,12 @@
             this.lblWagerName = new System.Windows.Forms.Label();
             this.lblWinner = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.lblCredits = new System.Windows.Forms.Label();
-            this.lblShipNumber = new System.Windows.Forms.Label();
-            this.lblCreedoCash = new System.Windows.Forms.Label();
-            this.lblJubbaCash = new System.Windows.Forms.Label();
-            this.lblSnokeCash = new System.Windows.Forms.Label();
             this.lblWattoCash = new System.Windows.Forms.Label();
+            this.lblSnokeCash = new System.Windows.Forms.Label();
+            this.lblJubbaCash = new System.Windows.Forms.Label();
+            this.lblCreedoCash = new System.Windows.Forms.Label();
+            this.lblShipNumber = new System.Windows.Forms.Label();
+            this.lblCredits = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Pb1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pb2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pb3)).BeginInit();
@@ -213,9 +213,9 @@
             // 
             this.lblWagerName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.lblWagerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWagerName.Location = new System.Drawing.Point(496, 58);
+            this.lblWagerName.Location = new System.Drawing.Point(496, 23);
             this.lblWagerName.Name = "lblWagerName";
-            this.lblWagerName.Size = new System.Drawing.Size(303, 188);
+            this.lblWagerName.Size = new System.Drawing.Size(303, 223);
             this.lblWagerName.TabIndex = 13;
             // 
             // lblWinner
@@ -265,44 +265,15 @@
             this.splitContainer1.SplitterDistance = 409;
             this.splitContainer1.TabIndex = 15;
             // 
-            // lblCredits
+            // lblWattoCash
             // 
-            this.lblCredits.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCredits.Location = new System.Drawing.Point(823, 97);
-            this.lblCredits.Name = "lblCredits";
-            this.lblCredits.Size = new System.Drawing.Size(123, 23);
-            this.lblCredits.TabIndex = 15;
-            this.lblCredits.Text = "Galactic Credits";
-            // 
-            // lblShipNumber
-            // 
-            this.lblShipNumber.AutoSize = true;
-            this.lblShipNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShipNumber.Location = new System.Drawing.Point(826, 166);
-            this.lblShipNumber.Name = "lblShipNumber";
-            this.lblShipNumber.Size = new System.Drawing.Size(97, 20);
-            this.lblShipNumber.TabIndex = 16;
-            this.lblShipNumber.Text = "ShipNumber";
-            // 
-            // lblCreedoCash
-            // 
-            this.lblCreedoCash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblCreedoCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCreedoCash.Location = new System.Drawing.Point(312, 97);
-            this.lblCreedoCash.Name = "lblCreedoCash";
-            this.lblCreedoCash.Size = new System.Drawing.Size(100, 23);
-            this.lblCreedoCash.TabIndex = 17;
-            this.lblCreedoCash.Text = "label1";
-            // 
-            // lblJubbaCash
-            // 
-            this.lblJubbaCash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblJubbaCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJubbaCash.Location = new System.Drawing.Point(312, 134);
-            this.lblJubbaCash.Name = "lblJubbaCash";
-            this.lblJubbaCash.Size = new System.Drawing.Size(100, 23);
-            this.lblJubbaCash.TabIndex = 18;
-            this.lblJubbaCash.Text = "label2";
+            this.lblWattoCash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblWattoCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWattoCash.Location = new System.Drawing.Point(312, 221);
+            this.lblWattoCash.Name = "lblWattoCash";
+            this.lblWattoCash.Size = new System.Drawing.Size(100, 23);
+            this.lblWattoCash.TabIndex = 20;
+            this.lblWattoCash.Text = "label4";
             // 
             // lblSnokeCash
             // 
@@ -314,15 +285,44 @@
             this.lblSnokeCash.TabIndex = 19;
             this.lblSnokeCash.Text = "label3";
             // 
-            // lblWattoCash
+            // lblJubbaCash
             // 
-            this.lblWattoCash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblWattoCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWattoCash.Location = new System.Drawing.Point(312, 221);
-            this.lblWattoCash.Name = "lblWattoCash";
-            this.lblWattoCash.Size = new System.Drawing.Size(100, 23);
-            this.lblWattoCash.TabIndex = 20;
-            this.lblWattoCash.Text = "label4";
+            this.lblJubbaCash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblJubbaCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJubbaCash.Location = new System.Drawing.Point(312, 134);
+            this.lblJubbaCash.Name = "lblJubbaCash";
+            this.lblJubbaCash.Size = new System.Drawing.Size(100, 23);
+            this.lblJubbaCash.TabIndex = 18;
+            this.lblJubbaCash.Text = "label2";
+            // 
+            // lblCreedoCash
+            // 
+            this.lblCreedoCash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblCreedoCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCreedoCash.Location = new System.Drawing.Point(312, 97);
+            this.lblCreedoCash.Name = "lblCreedoCash";
+            this.lblCreedoCash.Size = new System.Drawing.Size(100, 23);
+            this.lblCreedoCash.TabIndex = 17;
+            this.lblCreedoCash.Text = "label1";
+            // 
+            // lblShipNumber
+            // 
+            this.lblShipNumber.AutoSize = true;
+            this.lblShipNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShipNumber.Location = new System.Drawing.Point(826, 166);
+            this.lblShipNumber.Name = "lblShipNumber";
+            this.lblShipNumber.Size = new System.Drawing.Size(97, 20);
+            this.lblShipNumber.TabIndex = 16;
+            this.lblShipNumber.Text = "ShipNumber";
+            // 
+            // lblCredits
+            // 
+            this.lblCredits.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCredits.Location = new System.Drawing.Point(823, 97);
+            this.lblCredits.Name = "lblCredits";
+            this.lblCredits.Size = new System.Drawing.Size(123, 23);
+            this.lblCredits.TabIndex = 15;
+            this.lblCredits.Text = "Galactic Credits";
             // 
             // Form1
             // 

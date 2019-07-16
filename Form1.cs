@@ -19,7 +19,7 @@ namespace KesselRun
         Punter[] myPunter = new Punter[4];
         Punter CurrantPunter = new Snoke();
 
-        private string ShipWinner;
+        private int ShipWinner;
         public Form1()
         {
             InitializeComponent();
@@ -126,7 +126,7 @@ namespace KesselRun
             CurrantPunter.Bet = (float)UdBet.Value;
             lblWagerName.Text += CurrantPunter.PunterName + " Bets " + CurrantPunter.Bet + Environment.NewLine;
         }
-
+        // This just puts the value of Cash each Punter has on the form
         private void PunterCash()
         {
             lblCreedoCash.Text = myPunter[0].Cash.ToString();
@@ -134,6 +134,22 @@ namespace KesselRun
             lblSnokeCash.Text = myPunter[2].Cash.ToString();
             lblWattoCash.Text = myPunter[3].Cash.ToString();
         }
+
+        private void PunterCashUpdate()
+
+        {
+            lblCreedoCash.Text = myPunter[0].Cash.ToString();
+            lblJubbaCash.Text = myPunter[1].Cash.ToString();
+            lblSnokeCash.Text = myPunter[2].Cash.ToString();
+            lblWattoCash.Text = myPunter[3].Cash.ToString();
+
+
+        }
+
+
+
+
+
         private void ShipNum()
         {
             CurrantPunter.Ships = (int)UdShip.Value;
@@ -152,8 +168,10 @@ namespace KesselRun
                 ships[i].myPB.Left = 10;
             }
 
+            lblWagerName.Text = "";
 
         }
+
 
         private void LoadPunters()
 
@@ -204,7 +222,9 @@ namespace KesselRun
                         end = true; // loop until end = true
                         this.Text = ships[i].Name + " the Ship has won";
                         // this is the ship that won
-                        ShipWinner = ships[i].Name;
+                        ShipWinner = i;
+
+
 
                     }
 
@@ -214,9 +234,33 @@ namespace KesselRun
 
             }
 
+            BetCheck();
         }
         #endregion
+        private void BetCheck()
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                if (myPunter[i].Ships == ShipWinner)// the ship the punter bet on
+                {
+                    myPunter[i].Cash += myPunter[i].Bet;
+                    lblWinner.Text = myPunter[i].PunterName + "  " + myPunter[i].Cash;
 
+                    // myPunter[i].LabelWinner = lblWinner;
+
+                }
+                else
+                {
+                    myPunter[i].Cash -= myPunter[i].Bet;
+                }
+
+                PunterCashUpdate();
+                // update Punter Cash
+                //myPunter[i] = Factory.GetAPunter(i);
+                //myPunter[i].LabelWinner = lblWinner;
+
+            }
+        }
 
     }
 }
