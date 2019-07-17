@@ -135,13 +135,53 @@ namespace KesselRun
             lblWattoCash.Text = myPunter[3].Cash.ToString();
         }
 
+        private void RbBool()
+        {
+            RbCreedo.Enabled = true;
+            RbJubba.Enabled = true;
+            RbSnoke.Enabled = true;
+            RbWatto.Enabled = true;
+        }
+
+        private void CashCheck()
+        {
+            if (myPunter[0].Cash == 0)
+            {
+                RbCreedo.Enabled = false;
+                lblCreedoCash.Text += "  Busted";
+            }
+            if (myPunter[1].Cash == 0)
+            {
+                RbJubba.Enabled = false;
+                lblJubbaCash.Text += "  Busted";
+            }
+            if (myPunter[2].Cash == 0)
+            {
+                RbSnoke.Enabled = false;
+                lblSnokeCash.Text += "  Busted";
+            }
+            if (myPunter[3].Cash == 0)
+            {
+                RbWatto.Enabled = false;
+                lblWattoCash.Text += "  Busted";
+
+            }
+        }
         private void PunterCashUpdate()
 
         {
+
             lblCreedoCash.Text = myPunter[0].Cash.ToString();
+
             lblJubbaCash.Text = myPunter[1].Cash.ToString();
+
             lblSnokeCash.Text = myPunter[2].Cash.ToString();
             lblWattoCash.Text = myPunter[3].Cash.ToString();
+            if (myPunter[0].Cash == 0) RbCreedo.Enabled = false;
+            if (myPunter[1].Cash == 0) RbJubba.Enabled = false;
+            if (myPunter[2].Cash == 0) RbSnoke.Enabled = false;
+            if (myPunter[3].Cash == 0) RbWatto.Enabled = false;
+
 
 
         }
@@ -169,6 +209,7 @@ namespace KesselRun
             }
 
             lblWagerName.Text = "";
+            lblWinner.Text = "";
 
         }
 
@@ -255,6 +296,7 @@ namespace KesselRun
                 }
 
                 PunterCashUpdate();
+                CashCheck();
                 // update Punter Cash
                 //myPunter[i] = Factory.GetAPunter(i);
                 //myPunter[i].LabelWinner = lblWinner;
