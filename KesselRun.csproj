@@ -139,5 +139,11 @@
   <ItemGroup>
     <None Include="Resources\Ugor.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Millenium-FalconClear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Millenium-Falconclear2.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

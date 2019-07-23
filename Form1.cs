@@ -10,10 +10,12 @@ using System.Windows.Forms;
 using KesselRun.Business;
 using KesselRun.Business.AllPunters;
 
+
 namespace KesselRun
 {
     public partial class Form1 : Form
     {
+        private BettingDetails bettingDetails = new BettingDetails();
         // Create my Ships
         Ships[] ships = new Ships[4];
         Punter[] myPunter = new Punter[4];
@@ -135,13 +137,7 @@ namespace KesselRun
             lblWattoCash.Text = myPunter[3].Cash.ToString();
         }
 
-        private void RbBool()
-        {
-            RbCreedo.Enabled = true;
-            RbJubba.Enabled = true;
-            RbSnoke.Enabled = true;
-            RbWatto.Enabled = true;
-        }
+
 
         private void CashCheck()
         {
@@ -149,21 +145,25 @@ namespace KesselRun
             {
                 RbCreedo.Enabled = false;
                 lblCreedoCash.Text += "  Busted";
+                BettingDetails.AllBusted[0] = false;
             }
             if (myPunter[1].Cash == 0)
             {
                 RbJubba.Enabled = false;
                 lblJubbaCash.Text += "  Busted";
+                BettingDetails.AllBusted[1] = false;
             }
             if (myPunter[2].Cash == 0)
             {
                 RbSnoke.Enabled = false;
                 lblSnokeCash.Text += "  Busted";
+                BettingDetails.AllBusted[2] = false;
             }
             if (myPunter[3].Cash == 0)
             {
                 RbWatto.Enabled = false;
                 lblWattoCash.Text += "  Busted";
+                BettingDetails.AllBusted[3] = false;
 
             }
         }
@@ -186,6 +186,20 @@ namespace KesselRun
 
         }
 
+        private void EndGame()
+        {
+
+            if (BettingDetails.End == false)
+            {
+
+                splitContainer1.Panel1.BackgroundImage = (Resource1.stars_space_nebula_95432_1920x1080);
+                splitContainer1.Panel1.BackgroundImageLayout = ImageLayout.Tile;
+
+
+
+            }
+
+        }
 
 
 
@@ -297,6 +311,9 @@ namespace KesselRun
 
                 PunterCashUpdate();
                 CashCheck();
+                bettingDetails.CheckDead();
+
+                EndGame();
                 // update Punter Cash
                 //myPunter[i] = Factory.GetAPunter(i);
                 //myPunter[i].LabelWinner = lblWinner;

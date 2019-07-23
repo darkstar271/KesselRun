@@ -133,6 +133,26 @@ namespace KesselRun {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Millenium_FalconClear {
+            get {
+                object obj = ResourceManager.GetObject("Millenium_FalconClear", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Millenium_Falconclear2 {
+            get {
+                object obj = ResourceManager.GetObject("Millenium_Falconclear2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Ogor {
             get {
                 object obj = ResourceManager.GetObject("Ogor", resourceCulture);

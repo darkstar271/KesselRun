@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Pb1 = new System.Windows.Forms.PictureBox();
-            this.Pb2 = new System.Windows.Forms.PictureBox();
-            this.Pb3 = new System.Windows.Forms.PictureBox();
-            this.Pb4 = new System.Windows.Forms.PictureBox();
             this.UdBet = new System.Windows.Forms.NumericUpDown();
             this.UdShip = new System.Windows.Forms.NumericUpDown();
             this.btnStart = new System.Windows.Forms.Button();
@@ -44,64 +40,27 @@
             this.lblWagerName = new System.Windows.Forms.Label();
             this.lblWinner = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.Pb1 = new System.Windows.Forms.PictureBox();
+            this.Pb4 = new System.Windows.Forms.PictureBox();
+            this.Pb2 = new System.Windows.Forms.PictureBox();
+            this.Pb3 = new System.Windows.Forms.PictureBox();
             this.lblWattoCash = new System.Windows.Forms.Label();
             this.lblSnokeCash = new System.Windows.Forms.Label();
             this.lblJubbaCash = new System.Windows.Forms.Label();
             this.lblCreedoCash = new System.Windows.Forms.Label();
             this.lblShipNumber = new System.Windows.Forms.Label();
             this.lblCredits = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.Pb1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pb2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pb3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pb4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UdBet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UdShip)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Pb1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pb4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pb2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pb3)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Pb1
-            // 
-            this.Pb1.BackColor = System.Drawing.SystemColors.Control;
-            this.Pb1.BackgroundImage = global::KesselRun.Resource1.Millenium_Falcon_920x518;
-            this.Pb1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Pb1.Location = new System.Drawing.Point(6, 3);
-            this.Pb1.Name = "Pb1";
-            this.Pb1.Size = new System.Drawing.Size(100, 79);
-            this.Pb1.TabIndex = 0;
-            this.Pb1.TabStop = false;
-            // 
-            // Pb2
-            // 
-            this.Pb2.BackgroundImage = global::KesselRun.Resource1.Scimitar_BF2;
-            this.Pb2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Pb2.Location = new System.Drawing.Point(6, 88);
-            this.Pb2.Name = "Pb2";
-            this.Pb2.Size = new System.Drawing.Size(100, 79);
-            this.Pb2.TabIndex = 1;
-            this.Pb2.TabStop = false;
-            // 
-            // Pb3
-            // 
-            this.Pb3.BackgroundImage = global::KesselRun.Resource1.Slave_1;
-            this.Pb3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Pb3.Location = new System.Drawing.Point(6, 173);
-            this.Pb3.Name = "Pb3";
-            this.Pb3.Size = new System.Drawing.Size(100, 79);
-            this.Pb3.TabIndex = 2;
-            this.Pb3.TabStop = false;
-            // 
-            // Pb4
-            // 
-            this.Pb4.BackgroundImage = global::KesselRun.Resource1._68_960x600f;
-            this.Pb4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Pb4.Location = new System.Drawing.Point(6, 272);
-            this.Pb4.Name = "Pb4";
-            this.Pb4.Size = new System.Drawing.Size(100, 79);
-            this.Pb4.TabIndex = 3;
-            this.Pb4.TabStop = false;
             // 
             // UdBet
             // 
@@ -265,6 +224,47 @@
             this.splitContainer1.SplitterDistance = 409;
             this.splitContainer1.TabIndex = 15;
             // 
+            // Pb1
+            // 
+            this.Pb1.BackColor = System.Drawing.SystemColors.Control;
+            this.Pb1.BackgroundImage = global::KesselRun.Resource1.Millenium_Falcon_920x518;
+            this.Pb1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Pb1.Location = new System.Drawing.Point(6, 3);
+            this.Pb1.Name = "Pb1";
+            this.Pb1.Size = new System.Drawing.Size(100, 79);
+            this.Pb1.TabIndex = 0;
+            this.Pb1.TabStop = false;
+            // 
+            // Pb4
+            // 
+            this.Pb4.BackgroundImage = global::KesselRun.Resource1._68_960x600f;
+            this.Pb4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Pb4.Location = new System.Drawing.Point(6, 272);
+            this.Pb4.Name = "Pb4";
+            this.Pb4.Size = new System.Drawing.Size(100, 79);
+            this.Pb4.TabIndex = 3;
+            this.Pb4.TabStop = false;
+            // 
+            // Pb2
+            // 
+            this.Pb2.BackgroundImage = global::KesselRun.Resource1.Scimitar_BF2;
+            this.Pb2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Pb2.Location = new System.Drawing.Point(6, 88);
+            this.Pb2.Name = "Pb2";
+            this.Pb2.Size = new System.Drawing.Size(100, 79);
+            this.Pb2.TabIndex = 1;
+            this.Pb2.TabStop = false;
+            // 
+            // Pb3
+            // 
+            this.Pb3.BackgroundImage = global::KesselRun.Resource1.Slave_1;
+            this.Pb3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Pb3.Location = new System.Drawing.Point(6, 173);
+            this.Pb3.Name = "Pb3";
+            this.Pb3.Size = new System.Drawing.Size(100, 79);
+            this.Pb3.TabIndex = 2;
+            this.Pb3.TabStop = false;
+            // 
             // lblWattoCash
             // 
             this.lblWattoCash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -333,10 +333,6 @@
             this.Controls.Add(this.splitContainer1);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.Pb1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pb2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pb3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pb4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UdBet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UdShip)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -344,6 +340,10 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Pb1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pb4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pb2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pb3)).EndInit();
             this.ResumeLayout(false);
 
         }
