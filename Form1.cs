@@ -145,25 +145,25 @@ namespace KesselRun
             {
                 RbCreedo.Enabled = false;
                 lblCreedoCash.Text += "  Busted";
-                BettingDetails.AllBusted[0] = false;
+                bettingDetails.AllBusted[0] = false;
             }
             if (myPunter[1].Cash == 0)
             {
                 RbJubba.Enabled = false;
                 lblJubbaCash.Text += "  Busted";
-                BettingDetails.AllBusted[1] = false;
+                bettingDetails.AllBusted[1] = false;
             }
             if (myPunter[2].Cash == 0)
             {
                 RbSnoke.Enabled = false;
                 lblSnokeCash.Text += "  Busted";
-                BettingDetails.AllBusted[2] = false;
+                bettingDetails.AllBusted[2] = false;
             }
             if (myPunter[3].Cash == 0)
             {
                 RbWatto.Enabled = false;
                 lblWattoCash.Text += "  Busted";
-                BettingDetails.AllBusted[3] = false;
+                bettingDetails.AllBusted[3] = false;
 
             }
         }
@@ -192,7 +192,7 @@ namespace KesselRun
             if (BettingDetails.End == false)
             {
 
-                splitContainer1.Panel1.BackgroundImage = (Resource1.stars_space_nebula_95432_1920x1080);
+                splitContainer1.Panel1.BackgroundImage = (Resource1.end);
                 splitContainer1.Panel1.BackgroundImageLayout = ImageLayout.Tile;
 
 
@@ -311,7 +311,7 @@ namespace KesselRun
 
                 PunterCashUpdate();
                 CashCheck();
-                bettingDetails.CheckDead();
+                bettingDetails.CheckDead(bettingDetails.AllBusted);
 
                 EndGame();
                 // update Punter Cash

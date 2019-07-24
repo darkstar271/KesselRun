@@ -12,32 +12,34 @@ namespace KesselRunTest
         BettingDetails testBettingDetails = new BettingDetails();
         [TestMethod]
         public void GameEndTest()
-        {public static List<bool> AllBusted = new List<bool> { true, true, true, true };
-        var Actual = testBettingDetails.CheckDead();
-        Assert.IsFalse();
-
-
-
-
-        }
-
-    public bool CheckDead()
-    {
-
-        //this checks for True/False, if any values are still true, if all values are false, it then runs a method 
-        if (!AllBusted.Contains(true))
         {
-            End = false;
-            //everyone is dead
-            return true;
+            List<bool> AllBusted = new List<bool> { true, true, true, true };
+            var Actual = testBettingDetails.CheckDead(AllBusted);
+
+
+            Assert.IsFalse(Actual);
+
+
+
 
         }
 
-        return false;
+        [TestMethod]
+        public void GameEndTest2()
+        {
+            List<bool> AllBusted = new List<bool> { false, false, false, false };
+            var Actual = testBettingDetails.CheckDead(AllBusted);
+
+
+            Assert.IsTrue(Actual);
+
+
+
+
+        }
+
+
+
+
     }
-
-
-
-
-}
 }

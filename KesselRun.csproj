@@ -145,5 +145,11 @@
   <ItemGroup>
     <None Include="Resources\Millenium-Falconclear2.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\end game.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\end.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

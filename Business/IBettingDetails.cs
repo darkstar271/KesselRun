@@ -11,13 +11,13 @@ namespace KesselRun.Business
         public static bool End { get; set; } = true;
         // this uses a List to hold 4 Boolen values, all are set to "True" and  will be tested with the CheckDead method
         // if all of the values change to false then it's "End of Game"
-        public static List<bool> AllBusted = new List<bool> { true, true, true, true };
+        public List<bool> AllBusted = new List<bool> { true, true, true, true };
 
 
 
 
 
-        public bool CheckDead()
+        public bool CheckDead(List<bool> AllBusted)
         {
 
             //this checks for True/False, if any values are still true, if all values are false, it then runs a method 
