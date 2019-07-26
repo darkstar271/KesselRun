@@ -50,6 +50,7 @@
             this.Pb4 = new System.Windows.Forms.PictureBox();
             this.Pb2 = new System.Windows.Forms.PictureBox();
             this.Pb3 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.UdBet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UdShip)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -64,8 +65,9 @@
             // 
             // UdBet
             // 
+            this.UdBet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.UdBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UdBet.Location = new System.Drawing.Point(599, 103);
+            this.UdBet.Location = new System.Drawing.Point(345, 80);
             this.UdBet.Name = "UdBet";
             this.UdBet.Size = new System.Drawing.Size(120, 26);
             this.UdBet.TabIndex = 4;
@@ -77,49 +79,59 @@
             // 
             // UdShip
             // 
+            this.UdShip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.UdShip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UdShip.Location = new System.Drawing.Point(599, 181);
+            this.UdShip.Location = new System.Drawing.Point(345, 158);
             this.UdShip.Name = "UdShip";
             this.UdShip.Size = new System.Drawing.Size(120, 26);
             this.UdShip.TabIndex = 5;
             // 
             // btnStart
             // 
+            this.btnStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStart.Location = new System.Drawing.Point(1000, 23);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(75, 36);
             this.btnStart.TabIndex = 6;
             this.btnStart.Text = "Start";
-            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.UseVisualStyleBackColor = false;
             this.btnStart.Click += new System.EventHandler(this.BtnStart_Click);
             // 
             // btnReset
             // 
+            this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReset.Location = new System.Drawing.Point(997, 175);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(75, 36);
             this.btnReset.TabIndex = 7;
             this.btnReset.Text = "Reset";
-            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.BtnStart_Click);
             // 
             // btnWager
             // 
+            this.btnWager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnWager.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnWager.Location = new System.Drawing.Point(997, 101);
             this.btnWager.Name = "btnWager";
             this.btnWager.Size = new System.Drawing.Size(75, 36);
             this.btnWager.TabIndex = 8;
             this.btnWager.Text = "Wager";
-            this.btnWager.UseVisualStyleBackColor = true;
+            this.btnWager.UseVisualStyleBackColor = false;
             this.btnWager.Click += new System.EventHandler(this.BtnStart_Click);
             // 
             // RbWatto
             // 
             this.RbWatto.AutoSize = true;
+            this.RbWatto.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.RbWatto.FlatAppearance.BorderSize = 4;
+            this.RbWatto.FlatAppearance.CheckedBackColor = System.Drawing.Color.Red;
+            this.RbWatto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.RbWatto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
             this.RbWatto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RbWatto.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.RbWatto.Location = new System.Drawing.Point(17, 173);
             this.RbWatto.Name = "RbWatto";
             this.RbWatto.Size = new System.Drawing.Size(70, 24);
@@ -132,7 +144,13 @@
             // RbSnoke
             // 
             this.RbSnoke.AutoSize = true;
+            this.RbSnoke.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.RbSnoke.FlatAppearance.BorderSize = 4;
+            this.RbSnoke.FlatAppearance.CheckedBackColor = System.Drawing.Color.Red;
+            this.RbSnoke.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.RbSnoke.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
             this.RbSnoke.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RbSnoke.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.RbSnoke.Location = new System.Drawing.Point(15, 127);
             this.RbSnoke.Name = "RbSnoke";
             this.RbSnoke.Size = new System.Drawing.Size(73, 24);
@@ -145,7 +163,13 @@
             // RbJubba
             // 
             this.RbJubba.AutoSize = true;
+            this.RbJubba.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.RbJubba.FlatAppearance.BorderSize = 4;
+            this.RbJubba.FlatAppearance.CheckedBackColor = System.Drawing.Color.Red;
+            this.RbJubba.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.RbJubba.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
             this.RbJubba.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RbJubba.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.RbJubba.Location = new System.Drawing.Point(15, 86);
             this.RbJubba.Name = "RbJubba";
             this.RbJubba.Size = new System.Drawing.Size(71, 24);
@@ -158,7 +182,13 @@
             // RbCreedo
             // 
             this.RbCreedo.AutoSize = true;
+            this.RbCreedo.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.RbCreedo.FlatAppearance.BorderSize = 4;
+            this.RbCreedo.FlatAppearance.CheckedBackColor = System.Drawing.Color.Red;
+            this.RbCreedo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.RbCreedo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
             this.RbCreedo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RbCreedo.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.RbCreedo.Location = new System.Drawing.Point(12, 49);
             this.RbCreedo.Name = "RbCreedo";
             this.RbCreedo.Size = new System.Drawing.Size(79, 24);
@@ -172,18 +202,19 @@
             // 
             this.lblWagerName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.lblWagerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWagerName.Location = new System.Drawing.Point(240, 23);
+            this.lblWagerName.Location = new System.Drawing.Point(485, 31);
             this.lblWagerName.Name = "lblWagerName";
-            this.lblWagerName.Size = new System.Drawing.Size(303, 223);
+            this.lblWagerName.Size = new System.Drawing.Size(432, 223);
             this.lblWagerName.TabIndex = 13;
+            this.lblWagerName.Click += new System.EventHandler(this.LblWagerName_Click);
             // 
             // lblWinner
             // 
             this.lblWinner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.lblWinner.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWinner.Location = new System.Drawing.Point(1133, 31);
+            this.lblWinner.Location = new System.Drawing.Point(1115, 58);
             this.lblWinner.Name = "lblWinner";
-            this.lblWinner.Size = new System.Drawing.Size(140, 66);
+            this.lblWinner.Size = new System.Drawing.Size(191, 153);
             this.lblWinner.TabIndex = 14;
             // 
             // splitContainer1
@@ -195,6 +226,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Black;
             this.splitContainer1.Panel1.BackgroundImage = global::KesselRun.Resource1.starry_sky_night_stars_115042_1920x1080;
             this.splitContainer1.Panel1.Controls.Add(this.Pb1);
             this.splitContainer1.Panel1.Controls.Add(this.Pb4);
@@ -203,6 +235,9 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.Black;
+            this.splitContainer1.Panel2.BackgroundImage = global::KesselRun.Resource1.starry_sky_night_stars_115042_1920x1080;
+            this.splitContainer1.Panel2.Controls.Add(this.label1);
             this.splitContainer1.Panel2.Controls.Add(this.lblWattoCash);
             this.splitContainer1.Panel2.Controls.Add(this.lblSnokeCash);
             this.splitContainer1.Panel2.Controls.Add(this.lblJubbaCash);
@@ -226,49 +261,46 @@
             // 
             // lblWattoCash
             // 
-            this.lblWattoCash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblWattoCash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.lblWattoCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWattoCash.Location = new System.Drawing.Point(97, 175);
+            this.lblWattoCash.Location = new System.Drawing.Point(161, 175);
             this.lblWattoCash.Name = "lblWattoCash";
-            this.lblWattoCash.Size = new System.Drawing.Size(100, 23);
+            this.lblWattoCash.Size = new System.Drawing.Size(160, 23);
             this.lblWattoCash.TabIndex = 20;
-            this.lblWattoCash.Text = "label4";
             // 
             // lblSnokeCash
             // 
-            this.lblSnokeCash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblSnokeCash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.lblSnokeCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSnokeCash.Location = new System.Drawing.Point(97, 139);
+            this.lblSnokeCash.Location = new System.Drawing.Point(161, 139);
             this.lblSnokeCash.Name = "lblSnokeCash";
-            this.lblSnokeCash.Size = new System.Drawing.Size(100, 23);
+            this.lblSnokeCash.Size = new System.Drawing.Size(160, 23);
             this.lblSnokeCash.TabIndex = 19;
-            this.lblSnokeCash.Text = "label3";
             // 
             // lblJubbaCash
             // 
-            this.lblJubbaCash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblJubbaCash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.lblJubbaCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJubbaCash.Location = new System.Drawing.Point(97, 88);
+            this.lblJubbaCash.Location = new System.Drawing.Point(161, 88);
             this.lblJubbaCash.Name = "lblJubbaCash";
-            this.lblJubbaCash.Size = new System.Drawing.Size(100, 23);
+            this.lblJubbaCash.Size = new System.Drawing.Size(160, 23);
             this.lblJubbaCash.TabIndex = 18;
-            this.lblJubbaCash.Text = "label2";
             // 
             // lblCreedoCash
             // 
-            this.lblCreedoCash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblCreedoCash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.lblCreedoCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCreedoCash.Location = new System.Drawing.Point(97, 51);
+            this.lblCreedoCash.Location = new System.Drawing.Point(161, 51);
             this.lblCreedoCash.Name = "lblCreedoCash";
-            this.lblCreedoCash.Size = new System.Drawing.Size(137, 23);
+            this.lblCreedoCash.Size = new System.Drawing.Size(160, 23);
             this.lblCreedoCash.TabIndex = 17;
-            this.lblCreedoCash.Text = "label1";
             // 
             // lblShipNumber
             // 
             this.lblShipNumber.AutoSize = true;
             this.lblShipNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShipNumber.Location = new System.Drawing.Point(599, 143);
+            this.lblShipNumber.ForeColor = System.Drawing.Color.White;
+            this.lblShipNumber.Location = new System.Drawing.Point(345, 120);
             this.lblShipNumber.Name = "lblShipNumber";
             this.lblShipNumber.Size = new System.Drawing.Size(97, 20);
             this.lblShipNumber.TabIndex = 16;
@@ -277,7 +309,8 @@
             // lblCredits
             // 
             this.lblCredits.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCredits.Location = new System.Drawing.Point(596, 74);
+            this.lblCredits.ForeColor = System.Drawing.Color.White;
+            this.lblCredits.Location = new System.Drawing.Point(342, 51);
             this.lblCredits.Name = "lblCredits";
             this.lblCredits.Size = new System.Drawing.Size(123, 23);
             this.lblCredits.TabIndex = 15;
@@ -285,10 +318,11 @@
             // 
             // Pb1
             // 
-            this.Pb1.BackColor = System.Drawing.SystemColors.Control;
+            this.Pb1.BackColor = System.Drawing.Color.Black;
             this.Pb1.BackgroundImage = global::KesselRun.Resource1.Millenium_Falcon_920x518;
             this.Pb1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Pb1.Location = new System.Drawing.Point(6, 3);
+            this.Pb1.Margin = new System.Windows.Forms.Padding(0);
             this.Pb1.Name = "Pb1";
             this.Pb1.Size = new System.Drawing.Size(100, 79);
             this.Pb1.TabIndex = 0;
@@ -324,10 +358,21 @@
             this.Pb3.TabIndex = 2;
             this.Pb3.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(1116, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(146, 23);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Winning Punters";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1318, 695);
             this.Controls.Add(this.splitContainer1);
@@ -372,6 +417,7 @@
         private System.Windows.Forms.Label lblSnokeCash;
         private System.Windows.Forms.Label lblJubbaCash;
         private System.Windows.Forms.Label lblCreedoCash;
+        private System.Windows.Forms.Label label1;
     }
 }
 

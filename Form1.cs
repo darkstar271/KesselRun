@@ -27,6 +27,7 @@ namespace KesselRun
             InitializeComponent();
             LoadShips();
             LoadPunters();
+            //PunterCash just loads the balance of cash each punter has
             PunterCash();
 
 
@@ -122,7 +123,7 @@ namespace KesselRun
 
 
 
-
+        // just gets the ship 
         private void Wager()
         {
             CurrantPunter.Bet = (float)UdBet.Value;
@@ -138,35 +139,44 @@ namespace KesselRun
         }
 
 
-
+        // this checks at end of game if plays have no cash and if so, turns off their radio button and cash text box
         private void CashCheck()
-        {
+        {    // this IF statement does a comparison to see if punter "0" has zero cash
             if (myPunter[0].Cash == 0)
-            {
+            {   // tures off radio button
                 RbCreedo.Enabled = false;
+                // prints text Busted to this players cash label 
                 lblCreedoCash.Text += "  Busted";
+                // turns off the cash label 
+                lblCreedoCash.Enabled = false;
+                // changes the value in the List  "AllBusted" to false, for this player that is element "0"
                 bettingDetails.AllBusted[0] = false;
             }
             if (myPunter[1].Cash == 0)
             {
                 RbJubba.Enabled = false;
                 lblJubbaCash.Text += "  Busted";
+                lblJubbaCash.Enabled = false;
                 bettingDetails.AllBusted[1] = false;
             }
             if (myPunter[2].Cash == 0)
             {
                 RbSnoke.Enabled = false;
                 lblSnokeCash.Text += "  Busted";
+                lblSnokeCash.Enabled = false;
                 bettingDetails.AllBusted[2] = false;
             }
             if (myPunter[3].Cash == 0)
             {
                 RbWatto.Enabled = false;
                 lblWattoCash.Text += "  Busted";
+                lblWattoCash.Enabled = false;
                 bettingDetails.AllBusted[3] = false;
 
             }
         }
+
+        // updates how much cash each player has
         private void PunterCashUpdate()
 
         {
@@ -185,14 +195,14 @@ namespace KesselRun
 
 
         }
-
+        // if no player has cash Game over
         private void EndGame()
         {
 
             if (BettingDetails.End == false)
             {
 
-                splitContainer1.Panel1.BackgroundImage = (Resource1.end);
+                splitContainer1.Panel1.BackgroundImage = (Resource1.end2);
                 splitContainer1.Panel1.BackgroundImageLayout = ImageLayout.Tile;
 
 
@@ -203,7 +213,7 @@ namespace KesselRun
 
 
 
-
+        // just connects ship number to ship name 
         private void ShipNum()
         {
             CurrantPunter.Ships = (int)UdShip.Value;
@@ -227,7 +237,7 @@ namespace KesselRun
 
         }
 
-
+        // loads all the punters with a for loop, using the Factory Class and the GetAPunter Switch statement 
         private void LoadPunters()
 
         {
@@ -239,7 +249,7 @@ namespace KesselRun
 
 
         }
-
+        // this loads the ships name and image, I have hard coded the ship image to each picture box, but it would be just as ease to use something like, monster[0].myPB.BackgroundImage = Resource1.Agor;
         private void LoadShips()
         {
             ships[0] = new Ships { Lenght = 0, myPB = Pb1, Name = "Falcon" };
@@ -252,6 +262,8 @@ namespace KesselRun
         }
         #endregion
         #region Win and Lose 
+        // this is the heart of the program , it just loops through adding a random number to the back of each Picture box and checks if one has gotten to the end
+        // as well as  runs the Bet check method. 
         private void Parsec()
         {
             // while we haven't reached the end then keep looping
@@ -291,6 +303,8 @@ namespace KesselRun
 
             BetCheck();
         }
+        // Just another Loop , checks if any player has bet on the winning ship, if so it adds to the player cash, if not it deducts form player cash
+        // if any player has no cash it all so shows busted, and if all busted runs the ENDGame method.
         #endregion
         private void BetCheck()
         {
@@ -320,6 +334,10 @@ namespace KesselRun
 
             }
         }
+        // just shows who , how much and what ship bet on.
+        private void LblWagerName_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
