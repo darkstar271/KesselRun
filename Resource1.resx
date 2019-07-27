@@ -175,4 +175,19 @@
   <data name="end2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\end2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Game_over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Game over.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Game_over2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Game over2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Game_over3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Game over3.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="KlingonAlert" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\KlingonAlert.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Star_Trek_Red_Alert_Screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Star Trek Red Alert Screen.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

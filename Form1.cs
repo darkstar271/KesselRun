@@ -9,12 +9,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using KesselRun.Business;
 using KesselRun.Business.AllPunters;
+using System.Media;
 
 
 namespace KesselRun
 {
     public partial class Form1 : Form
     {
+        public void Gameover()
+
+        {
+            SoundPlayer sn1Player = new SoundPlayer(Resource1.Game_over3);
+            sn1Player.Play();
+
+        }
         private BettingDetails bettingDetails = new BettingDetails();
         // Create my Ships
         Ships[] ships = new Ships[4];
@@ -50,17 +58,16 @@ namespace KesselRun
                 {
                     case "btnStart":
                         Parsec();
-                        // HyperSpace();
                         break;
                     case "btnReset":
                         ResetAll();
                         break;
                     case "btnWager":
-
                         Wager();
                         ShipNum();
                         break;
                     case "4":
+
                         break;
                 }
             }
@@ -204,6 +211,7 @@ namespace KesselRun
 
                 splitContainer1.Panel1.BackgroundImage = (Resource1.end2);
                 splitContainer1.Panel1.BackgroundImageLayout = ImageLayout.Tile;
+                Gameover();
 
 
 
@@ -232,6 +240,7 @@ namespace KesselRun
                 ships[i].myPB.Left = 10;
             }
 
+            PunterCash();
             lblWagerName.Text = "";
             lblWinner.Text = "";
 
@@ -277,7 +286,7 @@ namespace KesselRun
                 for (int i = 0; i < 4; i++)
 
                 {
-                    ships[i].myPB.Left += myRand.Next(1, 11);
+                    ships[i].myPB.Left += myRand.Next(1, 15);
                     //50% of the time it takes 8 off the left which makes it go back
                     if (myrandstop.Next(1, 3) == 2)
                     {
@@ -300,6 +309,7 @@ namespace KesselRun
                 }
 
             }
+
 
             BetCheck();
         }

@@ -131,6 +131,33 @@ namespace KesselRun {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Game_over {
+            get {
+                return ResourceManager.GetStream("Game_over", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Game_over2 {
+            get {
+                return ResourceManager.GetStream("Game_over2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Game_over3 {
+            get {
+                return ResourceManager.GetStream("Game_over3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Igor {
@@ -147,6 +174,15 @@ namespace KesselRun {
             get {
                 object obj = ResourceManager.GetObject("KesselRunMap", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream KlingonAlert {
+            get {
+                return ResourceManager.GetStream("KlingonAlert", resourceCulture);
             }
         }
         
@@ -207,6 +243,15 @@ namespace KesselRun {
             get {
                 object obj = ResourceManager.GetObject("Slave_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Star_Trek_Red_Alert_Screen {
+            get {
+                return ResourceManager.GetStream("Star_Trek_Red_Alert_Screen", resourceCulture);
             }
         }
         

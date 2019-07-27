@@ -40,6 +40,7 @@
             this.lblWagerName = new System.Windows.Forms.Label();
             this.lblWinner = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblWattoCash = new System.Windows.Forms.Label();
             this.lblSnokeCash = new System.Windows.Forms.Label();
             this.lblJubbaCash = new System.Windows.Forms.Label();
@@ -50,7 +51,6 @@
             this.Pb4 = new System.Windows.Forms.PictureBox();
             this.Pb2 = new System.Windows.Forms.PictureBox();
             this.Pb3 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.UdBet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UdShip)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -259,6 +259,16 @@
             this.splitContainer1.SplitterDistance = 409;
             this.splitContainer1.TabIndex = 15;
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(1116, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(146, 23);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Winning Punters";
+            // 
             // lblWattoCash
             // 
             this.lblWattoCash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -357,16 +367,6 @@
             this.Pb3.Size = new System.Drawing.Size(100, 79);
             this.Pb3.TabIndex = 2;
             this.Pb3.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(1116, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 23);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Winning Punters";
             // 
             // Form1
             // 

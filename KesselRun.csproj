@@ -154,5 +154,20 @@
   <ItemGroup>
     <None Include="Resources\end2.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Game over.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Game over2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Star Trek Red Alert Screen.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KlingonAlert.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Game over3.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
