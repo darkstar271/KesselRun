@@ -40,6 +40,10 @@
             this.lblWagerName = new System.Windows.Forms.Label();
             this.lblWinner = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.Pb1 = new System.Windows.Forms.PictureBox();
+            this.Pb4 = new System.Windows.Forms.PictureBox();
+            this.Pb2 = new System.Windows.Forms.PictureBox();
+            this.Pb3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblWattoCash = new System.Windows.Forms.Label();
             this.lblSnokeCash = new System.Windows.Forms.Label();
@@ -47,10 +51,7 @@
             this.lblCreedoCash = new System.Windows.Forms.Label();
             this.lblShipNumber = new System.Windows.Forms.Label();
             this.lblCredits = new System.Windows.Forms.Label();
-            this.Pb1 = new System.Windows.Forms.PictureBox();
-            this.Pb4 = new System.Windows.Forms.PictureBox();
-            this.Pb2 = new System.Windows.Forms.PictureBox();
-            this.Pb3 = new System.Windows.Forms.PictureBox();
+            this.btnNewGame = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.UdBet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UdShip)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -82,17 +83,27 @@
             this.UdShip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.UdShip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UdShip.Location = new System.Drawing.Point(345, 158);
+            this.UdShip.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
             this.UdShip.Name = "UdShip";
             this.UdShip.Size = new System.Drawing.Size(120, 26);
             this.UdShip.TabIndex = 5;
+            this.UdShip.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // btnStart
             // 
             this.btnStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStart.Location = new System.Drawing.Point(1000, 23);
+            this.btnStart.Location = new System.Drawing.Point(997, 43);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(75, 36);
+            this.btnStart.Size = new System.Drawing.Size(100, 36);
             this.btnStart.TabIndex = 6;
             this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = false;
@@ -102,9 +113,9 @@
             // 
             this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.Location = new System.Drawing.Point(997, 175);
+            this.btnReset.Location = new System.Drawing.Point(997, 139);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(75, 36);
+            this.btnReset.Size = new System.Drawing.Size(100, 36);
             this.btnReset.TabIndex = 7;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = false;
@@ -114,9 +125,9 @@
             // 
             this.btnWager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnWager.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnWager.Location = new System.Drawing.Point(997, 101);
+            this.btnWager.Location = new System.Drawing.Point(997, 86);
             this.btnWager.Name = "btnWager";
-            this.btnWager.Size = new System.Drawing.Size(75, 36);
+            this.btnWager.Size = new System.Drawing.Size(100, 36);
             this.btnWager.TabIndex = 8;
             this.btnWager.Text = "Wager";
             this.btnWager.UseVisualStyleBackColor = false;
@@ -237,6 +248,7 @@
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.Black;
             this.splitContainer1.Panel2.BackgroundImage = global::KesselRun.Resource1.starry_sky_night_stars_115042_1920x1080;
+            this.splitContainer1.Panel2.Controls.Add(this.btnNewGame);
             this.splitContainer1.Panel2.Controls.Add(this.label1);
             this.splitContainer1.Panel2.Controls.Add(this.lblWattoCash);
             this.splitContainer1.Panel2.Controls.Add(this.lblSnokeCash);
@@ -258,6 +270,48 @@
             this.splitContainer1.Size = new System.Drawing.Size(1318, 695);
             this.splitContainer1.SplitterDistance = 409;
             this.splitContainer1.TabIndex = 15;
+            // 
+            // Pb1
+            // 
+            this.Pb1.BackColor = System.Drawing.Color.Black;
+            this.Pb1.BackgroundImage = global::KesselRun.Resource1.Millenium_Falcon_920x518;
+            this.Pb1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Pb1.Location = new System.Drawing.Point(6, 3);
+            this.Pb1.Margin = new System.Windows.Forms.Padding(0);
+            this.Pb1.Name = "Pb1";
+            this.Pb1.Size = new System.Drawing.Size(100, 79);
+            this.Pb1.TabIndex = 0;
+            this.Pb1.TabStop = false;
+            // 
+            // Pb4
+            // 
+            this.Pb4.BackgroundImage = global::KesselRun.Resource1._68_960x600f;
+            this.Pb4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Pb4.Location = new System.Drawing.Point(6, 272);
+            this.Pb4.Name = "Pb4";
+            this.Pb4.Size = new System.Drawing.Size(100, 79);
+            this.Pb4.TabIndex = 3;
+            this.Pb4.TabStop = false;
+            // 
+            // Pb2
+            // 
+            this.Pb2.BackgroundImage = global::KesselRun.Resource1.Scimitar_BF2;
+            this.Pb2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Pb2.Location = new System.Drawing.Point(6, 88);
+            this.Pb2.Name = "Pb2";
+            this.Pb2.Size = new System.Drawing.Size(100, 79);
+            this.Pb2.TabIndex = 1;
+            this.Pb2.TabStop = false;
+            // 
+            // Pb3
+            // 
+            this.Pb3.BackgroundImage = global::KesselRun.Resource1.Slave_1;
+            this.Pb3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Pb3.Location = new System.Drawing.Point(6, 173);
+            this.Pb3.Name = "Pb3";
+            this.Pb3.Size = new System.Drawing.Size(100, 79);
+            this.Pb3.TabIndex = 2;
+            this.Pb3.TabStop = false;
             // 
             // label1
             // 
@@ -326,47 +380,17 @@
             this.lblCredits.TabIndex = 15;
             this.lblCredits.Text = "Galactic Credits";
             // 
-            // Pb1
+            // btnNewGame
             // 
-            this.Pb1.BackColor = System.Drawing.Color.Black;
-            this.Pb1.BackgroundImage = global::KesselRun.Resource1.Millenium_Falcon_920x518;
-            this.Pb1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Pb1.Location = new System.Drawing.Point(6, 3);
-            this.Pb1.Margin = new System.Windows.Forms.Padding(0);
-            this.Pb1.Name = "Pb1";
-            this.Pb1.Size = new System.Drawing.Size(100, 79);
-            this.Pb1.TabIndex = 0;
-            this.Pb1.TabStop = false;
-            // 
-            // Pb4
-            // 
-            this.Pb4.BackgroundImage = global::KesselRun.Resource1._68_960x600f;
-            this.Pb4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Pb4.Location = new System.Drawing.Point(6, 272);
-            this.Pb4.Name = "Pb4";
-            this.Pb4.Size = new System.Drawing.Size(100, 79);
-            this.Pb4.TabIndex = 3;
-            this.Pb4.TabStop = false;
-            // 
-            // Pb2
-            // 
-            this.Pb2.BackgroundImage = global::KesselRun.Resource1.Scimitar_BF2;
-            this.Pb2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Pb2.Location = new System.Drawing.Point(6, 88);
-            this.Pb2.Name = "Pb2";
-            this.Pb2.Size = new System.Drawing.Size(100, 79);
-            this.Pb2.TabIndex = 1;
-            this.Pb2.TabStop = false;
-            // 
-            // Pb3
-            // 
-            this.Pb3.BackgroundImage = global::KesselRun.Resource1.Slave_1;
-            this.Pb3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Pb3.Location = new System.Drawing.Point(6, 173);
-            this.Pb3.Name = "Pb3";
-            this.Pb3.Size = new System.Drawing.Size(100, 79);
-            this.Pb3.TabIndex = 2;
-            this.Pb3.TabStop = false;
+            this.btnNewGame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnNewGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewGame.Location = new System.Drawing.Point(997, 187);
+            this.btnNewGame.Name = "btnNewGame";
+            this.btnNewGame.Size = new System.Drawing.Size(100, 36);
+            this.btnNewGame.TabIndex = 22;
+            this.btnNewGame.Text = "New Game";
+            this.btnNewGame.UseVisualStyleBackColor = false;
+            this.btnNewGame.Click += new System.EventHandler(this.BtnStart_Click);
             // 
             // Form1
             // 
@@ -418,6 +442,7 @@
         private System.Windows.Forms.Label lblJubbaCash;
         private System.Windows.Forms.Label lblCreedoCash;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnNewGame;
     }
 }
 

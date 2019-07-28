@@ -41,7 +41,23 @@ namespace KesselRun
 
 
         }
-
+        // this restarts a complete new game , 
+        public void NewGame()
+        {
+            LoadShips();
+            LoadPunters();
+            //PunterCash just loads the balance of cash each punter has
+            PunterCash();
+            ResetAll();
+            splitContainer1.Panel1.BackgroundImage = (Resource1.starry_sky_night_stars_115042_1920x1080);
+            splitContainer1.Panel1.BackgroundImageLayout = ImageLayout.Tile;
+            bettingDetails.AllBusted[0] = true;
+            bettingDetails.AllBusted[1] = true;
+            bettingDetails.AllBusted[2] = true;
+            bettingDetails.AllBusted[3] = true;
+            lblWagerName.Text = "";
+            lblWinner.Text = "";
+        }
         // this is a fake button and switch for all buttons
         #region Buttons & switch method
 
@@ -66,8 +82,8 @@ namespace KesselRun
                         Wager();
                         ShipNum();
                         break;
-                    case "4":
-
+                    case "New Game":
+                        NewGame();
                         break;
                 }
             }
