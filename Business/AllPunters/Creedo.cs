@@ -9,7 +9,6 @@ namespace KesselRun.Business.AllPunters
     class Creedo : Punter
 
     {
-
         public Creedo()
         {
             PunterName = "Creedo";
@@ -17,9 +16,7 @@ namespace KesselRun.Business.AllPunters
             Cash = 100;
 
 
-
         }
-
 
 
     }

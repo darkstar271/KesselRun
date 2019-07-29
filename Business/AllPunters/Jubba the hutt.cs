@@ -18,9 +18,7 @@ namespace KesselRun.Business.AllPunters
             Cash = 100;
 
 
-
         }
-
 
 
 

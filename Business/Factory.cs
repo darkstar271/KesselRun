@@ -8,13 +8,10 @@ namespace KesselRun.Business.AllPunters
 {
     public static class Factory
     {
-
         public static Punter GetAPunter(int id)
         {
-
             switch (id)
             {
-
                 case 0:
                     return new Creedo();
                 case 1:
@@ -29,15 +26,12 @@ namespace KesselRun.Business.AllPunters
 
 
 
-
             }
 
 
 
 
-
         }
-
 
 
 

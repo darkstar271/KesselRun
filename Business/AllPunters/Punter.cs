@@ -22,6 +22,5 @@ namespace KesselRun.Business.AllPunters
 
         int WildCard { get; set; }
 
-
     }
 }

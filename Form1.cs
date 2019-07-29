@@ -9,46 +9,52 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using KesselRun.Business;
 using KesselRun.Business.AllPunters;
-using System.Media;
-
+using System.Media;//this is needed to be able to play sound
 
 namespace KesselRun
 {
     public partial class Form1 : Form
-    {
+    {   // this just loads the Soundplayer, makes a new soundplayer sn1Player and loads a mp3 file from Resource1
+        // then sets sn1player to play by calling method Play();
+        // the last part Dispose(); releases all resources used by sn1Player.
         public void Gameover()
 
         {
             SoundPlayer sn1Player = new SoundPlayer(Resource1.Game_over3);
             sn1Player.Play();
-
+            sn1Player.Dispose();
         }
-        private BettingDetails bettingDetails = new BettingDetails();
+
+        private BettingDetails bettingDetails;
         // Create my Ships
-        Ships[] ships = new Ships[4];
+        private Ships[] ships;
         Punter[] myPunter = new Punter[4];
         Punter CurrantPunter = new Snoke();
 
         private int ShipWinner;
         public Form1()
         {
+            ships = new Ships[4];
             InitializeComponent();
+            bettingDetails = new BettingDetails();
             LoadShips();
             LoadPunters();
             //PunterCash just loads the balance of cash each punter has
             PunterCash();
-
 
 
         }
-        // this restarts a complete new game , 
+        // this restarts a complete new game , it shows some of the parts that have to be reset, Lists, radio buttons, background images, it's a proof of concept not the full code needed.
         public void NewGame()
         {
+            bettingDetails = new BettingDetails();
+            ships = new Ships[4];
             LoadShips();
             LoadPunters();
+
             //PunterCash just loads the balance of cash each punter has
-            PunterCash();
-            ResetAll();
+            // PunterCash();
+            NewGameReset();
             splitContainer1.Panel1.BackgroundImage = (Resource1.starry_sky_night_stars_115042_1920x1080);
             splitContainer1.Panel1.BackgroundImageLayout = ImageLayout.Tile;
             bettingDetails.AllBusted[0] = true;
@@ -73,17 +79,17 @@ namespace KesselRun
                 switch (ButNum)
                 {
                     case "btnStart":
-                        Parsec();
+                        Parsec();// the main game method
                         break;
                     case "btnReset":
-                        ResetAll();
+                        ResetAll();// Resets for a new race 
                         break;
                     case "btnWager":
-                        Wager();
-                        ShipNum();
+                        Wager();// places the bet
+                        ShipNum();// places what ship bet on
                         break;
-                    case "New Game":
-                        NewGame();
+                    case "btnNewGame":
+                        NewGame();// Resets for a completely new game from the start 
                         break;
                 }
             }
@@ -98,7 +104,6 @@ namespace KesselRun
             RadioButton fakeRb = new RadioButton();
             fakeRb = (RadioButton)sender;
 
-
             if (fakeRb.Checked == true)
 
             {
@@ -108,17 +113,14 @@ namespace KesselRun
                 // pass the data across to currentPunter.
                 switch (fakeRb.Name)
                 {
-
                     case "RbCreedo":
                         CurrantPunter = myPunter[0];
                         // lblCreedoCash.Text = myPunter[0].Cash.ToString();
                         break;
 
-
                     case "RbJubba":
                         CurrantPunter = myPunter[1];
                         break;
-
 
                     case "RbSnoke":
                         CurrantPunter = myPunter[2];
@@ -126,16 +128,12 @@ namespace KesselRun
                     case "RbWatto":
                         CurrantPunter = myPunter[3];
                         break;
-
                 }
 
                 this.Name = CurrantPunter.PunterName + " is the currant Punter";
             }
 
-
-
-            UdBet.Maximum = (decimal)CurrantPunter.Cash;
-
+            UdBet.Maximum = (decimal)CurrantPunter.Cash;// This prevents a Punter from betting more than they have in cash
 
 
         }
@@ -144,9 +142,7 @@ namespace KesselRun
 
         #region Methods & stuff
 
-
-
-        // just gets the ship 
+        // This gets the Punter name and how much they Bet and displays it
         private void Wager()
         {
             CurrantPunter.Bet = (float)UdBet.Value;
@@ -155,14 +151,13 @@ namespace KesselRun
         // This just puts the value of Cash each Punter has on the form
         private void PunterCash()
         {
-            lblCreedoCash.Text = myPunter[0].Cash.ToString();
+            lblCreedoCash.Text = myPunter[0].Cash.ToString();// sends cash value to label
             lblJubbaCash.Text = myPunter[1].Cash.ToString();
             lblSnokeCash.Text = myPunter[2].Cash.ToString();
             lblWattoCash.Text = myPunter[3].Cash.ToString();
         }
 
-
-        // this checks at end of game if plays have no cash and if so, turns off their radio button and cash text box
+        // this checks at end of game if players have no cash and if so, turns off their radio button and cash text box and sets the boolean value for them in List AllBusted to false
         private void CashCheck()
         {    // this IF statement does a comparison to see if punter "0" has zero cash
             if (myPunter[0].Cash == 0)
@@ -173,6 +168,7 @@ namespace KesselRun
                 // turns off the cash label 
                 lblCreedoCash.Enabled = false;
                 // changes the value in the List  "AllBusted" to false, for this player that is element "0"
+
                 bettingDetails.AllBusted[0] = false;
             }
             if (myPunter[1].Cash == 0)
@@ -195,15 +191,13 @@ namespace KesselRun
                 lblWattoCash.Text += "  Busted";
                 lblWattoCash.Enabled = false;
                 bettingDetails.AllBusted[3] = false;
-
             }
         }
 
-        // updates how much cash each player has
+        // updates how much cash each player has and makes sure there radio button is turned off
         private void PunterCashUpdate()
 
         {
-
             lblCreedoCash.Text = myPunter[0].Cash.ToString();
 
             lblJubbaCash.Text = myPunter[1].Cash.ToString();
@@ -216,36 +210,35 @@ namespace KesselRun
             if (myPunter[3].Cash == 0) RbWatto.Enabled = false;
 
 
-
         }
         // if no player has cash Game over
-        private void EndGame()
-        {
-
-            if (BettingDetails.End == false)
-            {
-
-                splitContainer1.Panel1.BackgroundImage = (Resource1.end2);
-                splitContainer1.Panel1.BackgroundImageLayout = ImageLayout.Tile;
-                Gameover();
 
 
-
-            }
-
-        }
-
-
-
-        // just connects ship number to ship name 
+        // just sets up the Punter and what ship they Bet on
         private void ShipNum()
         {
-            CurrantPunter.Ships = (int)UdShip.Value;
+            CurrantPunter.Ships = (int)UdShip.Value - 1;// sets the updown number to work with the List, the index starts at "0"
             lblWagerName.Text += CurrantPunter.PunterName + " Ship " + ships[CurrantPunter.Ships].Name + Environment.NewLine;
 
 
-
         }
+        // This resets a new game and some of the values
+        private void NewGameReset()
+        {
+            this.Text = "";
+            // resets the left to 10 for the race 
+            for (int i = 0; i < 4; i++)
+            {
+                ships[i].myPB.Left = 10;
+            }
+            lblWagerName.Text = "";
+            lblWinner.Text = "";
+            RbCreedo.Enabled = true; RbCreedo.Checked = false;
+            RbJubba.Enabled = true; RbJubba.Checked = false;
+            RbSnoke.Enabled = true; RbSnoke.Checked = false;
+            RbWatto.Enabled = true; RbWatto.Checked = false;
+        }
+        // This Resets for a new race, with out changing any cash values
         private void ResetAll()
 
         {
@@ -259,10 +252,17 @@ namespace KesselRun
             PunterCash();
             lblWagerName.Text = "";
             lblWinner.Text = "";
+            // This checks if Punter has cash and if true turns on there radio button and changes RB to unchecked
+            if (myPunter[0].Cash > 0) RbCreedo.Enabled = true; RbCreedo.Checked = false;
+            if (myPunter[1].Cash > 0) RbJubba.Enabled = true; RbJubba.Checked = false;
+            if (myPunter[2].Cash > 0) RbSnoke.Enabled = true; RbSnoke.Checked = false;
+            if (myPunter[3].Cash > 0) RbWatto.Enabled = true; RbWatto.Checked = false;
+
+
 
         }
 
-        // loads all the punters with a for loop, using the Factory Class and the GetAPunter Switch statement 
+        // loads all the punters with a for loop, using the Factory Class and the GetAPunter Switch statement
         private void LoadPunters()
 
         {
@@ -272,7 +272,6 @@ namespace KesselRun
                 myPunter[i].LabelWinner = lblWinner;
             }
 
-
         }
         // this loads the ships name and image, I have hard coded the ship image to each picture box, but it would be just as ease to use something like, monster[0].myPB.BackgroundImage = Resource1.Agor;
         private void LoadShips()
@@ -281,7 +280,7 @@ namespace KesselRun
             // monster[0].myPB.BackgroundImage = Resource1.Agor;
             ships[1] = new Ships { Lenght = 0, myPB = Pb2, Name = "Scimitar" };
             ships[2] = new Ships { Lenght = 0, myPB = Pb3, Name = "Slave 1" };
-            ships[3] = new Ships { Lenght = 0, myPB = Pb4, Name = "Rage" };
+            ships[3] = new Ships { Lenght = 0, myPB = Pb4, Name = "Executor " };
 
             //   string winner = ships[0].Name;
         }
@@ -308,26 +307,22 @@ namespace KesselRun
                     {
                         ships[i].myPB.Left -= 1;
                     }
-                    // if the monster reaches the end of the form 
+                    // if the ship reaches the end of the form ,Form1.ActiveForm.Width gets the value of the size of the form dynamically, meaning it gets the size at "Run Time not a preset size
                     if (ships[i].myPB.Left > Form1.ActiveForm.Width - ships[i].myPB.Width - 20)
                     {
                         end = true; // loop until end = true
                         this.Text = ships[i].Name + " the Ship has won";
                         // this is the ship that won
-                        ShipWinner = i;
-
+                        ShipWinner = i;// This assigns the winning ship to ShipWinner, it's used in the BetCheck method
 
 
                     }
 
 
-
                 }
-
             }
 
-
-            BetCheck();
+            BetCheck();// this runs the Betting Check
         }
         // Just another Loop , checks if any player has bet on the winning ship, if so it adds to the player cash, if not it deducts form player cash
         // if any player has no cash it all so shows busted, and if all busted runs the ENDGame method.
@@ -335,9 +330,12 @@ namespace KesselRun
         private void BetCheck()
         {
             for (int i = 0; i < 4; i++)
-            {
+            {   // This code,  if (myPunter[i].Cash == 0) { break; }
+                // stops a punter with out cash from having there Bets calculated 
+                if (myPunter[i].Cash == 0)
+                { break; }
                 if (myPunter[i].Ships == ShipWinner)// the ship the punter bet on
-                {
+                {   // if Punter wins they get Bet value added to there cash
                     myPunter[i].Cash += myPunter[i].Bet;
                     lblWinner.Text = myPunter[i].PunterName + "  " + myPunter[i].Cash;
 
@@ -345,14 +343,15 @@ namespace KesselRun
 
                 }
                 else
-                {
+                {   // for all other punters the amount they Bet is deducted from there cash
                     myPunter[i].Cash -= myPunter[i].Bet;
                 }
 
-                PunterCashUpdate();
+                PunterCashUpdate();// redisplays how much each punter has
                 CashCheck();
                 bettingDetails.CheckDead(bettingDetails.AllBusted);
-
+                // This is part of what happens if all of the Punters are busted, as each Punter loses, a value is changed in the ALLBusted List, CheckDead is part of this
+                //  
                 EndGame();
                 // update Punter Cash
                 //myPunter[i] = Factory.GetAPunter(i);
@@ -360,9 +359,30 @@ namespace KesselRun
 
             }
         }
+        // EndGame Checks if the 
+        private void EndGame()
+        {
+            if (BettingDetails.End == false)
+            {
+                splitContainer1.Panel1.BackgroundImage = (Resource1.end2);
+                splitContainer1.Panel1.BackgroundImageLayout = ImageLayout.Tile;
+                Gameover();
+
+
+            }
+        }
+
+
         // just shows who , how much and what ship bet on.
         private void LblWagerName_Click(object sender, EventArgs e)
         {
+        }
+        // This is a tooltip provides information about a control's purpose 
+        private void BtnStart_MouseHover(object sender, EventArgs e)
+        {//https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.tooltip?view=netframework-4.8
+            toolTip1.SetToolTip(btnStart, "This is a tool tip" + Environment.NewLine + "provides information about a control's purpose ");
+
+
 
         }
     }

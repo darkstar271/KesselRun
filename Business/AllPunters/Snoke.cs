@@ -17,9 +17,7 @@ namespace KesselRun.Business.AllPunters
             Ships = 0;
             Cash = 100;
 
-
         }
-
 
 
     }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.UdBet = new System.Windows.Forms.NumericUpDown();
             this.UdShip = new System.Windows.Forms.NumericUpDown();
             this.btnStart = new System.Windows.Forms.Button();
@@ -44,6 +45,7 @@
             this.Pb4 = new System.Windows.Forms.PictureBox();
             this.Pb2 = new System.Windows.Forms.PictureBox();
             this.Pb3 = new System.Windows.Forms.PictureBox();
+            this.btnNewGame = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblWattoCash = new System.Windows.Forms.Label();
             this.lblSnokeCash = new System.Windows.Forms.Label();
@@ -51,7 +53,7 @@
             this.lblCreedoCash = new System.Windows.Forms.Label();
             this.lblShipNumber = new System.Windows.Forms.Label();
             this.lblCredits = new System.Windows.Forms.Label();
-            this.btnNewGame = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.UdBet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UdShip)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -68,6 +70,11 @@
             // 
             this.UdBet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.UdBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UdBet.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             this.UdBet.Location = new System.Drawing.Point(345, 80);
             this.UdBet.Name = "UdBet";
             this.UdBet.Size = new System.Drawing.Size(120, 26);
@@ -84,7 +91,12 @@
             this.UdShip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UdShip.Location = new System.Drawing.Point(345, 158);
             this.UdShip.Maximum = new decimal(new int[] {
-            3,
+            4,
+            0,
+            0,
+            0});
+            this.UdShip.Minimum = new decimal(new int[] {
+            1,
             0,
             0,
             0});
@@ -108,6 +120,7 @@
             this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = false;
             this.btnStart.Click += new System.EventHandler(this.BtnStart_Click);
+            this.btnStart.MouseHover += new System.EventHandler(this.BtnStart_MouseHover);
             // 
             // btnReset
             // 
@@ -117,7 +130,7 @@
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(100, 36);
             this.btnReset.TabIndex = 7;
-            this.btnReset.Text = "Reset";
+            this.btnReset.Text = "New Race";
             this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.BtnStart_Click);
             // 
@@ -313,6 +326,18 @@
             this.Pb3.TabIndex = 2;
             this.Pb3.TabStop = false;
             // 
+            // btnNewGame
+            // 
+            this.btnNewGame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnNewGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewGame.Location = new System.Drawing.Point(997, 187);
+            this.btnNewGame.Name = "btnNewGame";
+            this.btnNewGame.Size = new System.Drawing.Size(100, 36);
+            this.btnNewGame.TabIndex = 22;
+            this.btnNewGame.Text = "New Game";
+            this.btnNewGame.UseVisualStyleBackColor = false;
+            this.btnNewGame.Click += new System.EventHandler(this.BtnStart_Click);
+            // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -380,17 +405,10 @@
             this.lblCredits.TabIndex = 15;
             this.lblCredits.Text = "Galactic Credits";
             // 
-            // btnNewGame
+            // toolTip1
             // 
-            this.btnNewGame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnNewGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNewGame.Location = new System.Drawing.Point(997, 187);
-            this.btnNewGame.Name = "btnNewGame";
-            this.btnNewGame.Size = new System.Drawing.Size(100, 36);
-            this.btnNewGame.TabIndex = 22;
-            this.btnNewGame.Text = "New Game";
-            this.btnNewGame.UseVisualStyleBackColor = false;
-            this.btnNewGame.Click += new System.EventHandler(this.BtnStart_Click);
+            this.toolTip1.BackColor = System.Drawing.Color.Yellow;
+            this.toolTip1.IsBalloon = true;
             // 
             // Form1
             // 
@@ -443,6 +461,7 @@
         private System.Windows.Forms.Label lblCreedoCash;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnNewGame;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
