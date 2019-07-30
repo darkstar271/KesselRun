@@ -167,15 +167,11 @@ namespace KesselRun
         // this checks at end of game if players have no cash and if so, turns off their radio button and cash text box and sets the boolean value for them in List AllBusted to false
         private void CashCheck()
         {    // this IF statement does a comparison to see if punter "0" has zero cash
-            if (myPunter[0].Cash == 0)
-            {   // tures off radio button
-                RbCreedo.Enabled = false;
-                // prints text Busted to this players cash label 
-                lblCreedoCash.Text += "  Busted";
-                // turns off the cash label 
-                lblCreedoCash.Enabled = false;
-                // changes the value in the List  "AllBusted" to false, for this player that is element "0"
-
+            if (myPunter[0].Cash == 0)// tures off radio button
+            {
+                RbCreedo.Enabled = false;// prints text Busted to this players cash label
+                lblCreedoCash.Text += "  Busted";// turns off the cash label
+                lblCreedoCash.Enabled = false;// changes the value in the List  "AllBusted" to false, for this player that is element "0"
                 bettingDetails.AllBusted[0] = false;
             }
             if (myPunter[1].Cash == 0)
@@ -206,9 +202,7 @@ namespace KesselRun
 
         {
             lblCreedoCash.Text = myPunter[0].Cash.ToString();
-
             lblJubbaCash.Text = myPunter[1].Cash.ToString();
-
             lblSnokeCash.Text = myPunter[2].Cash.ToString();
             lblWattoCash.Text = myPunter[3].Cash.ToString();
             if (myPunter[0].Cash == 0) RbCreedo.Enabled = false;
@@ -340,7 +334,12 @@ namespace KesselRun
             {   // This code,  if (myPunter[i].Cash == 0) { break; }
                 // stops a punter with out cash from having there Bets calculated 
                 if (myPunter[i].Cash == 0)
-                { break; }
+                {
+                    myPunter[i].Bet = 0;
+                }
+
+
+
                 if (myPunter[i].Ships == ShipWinner)// the ship the punter bet on
                 {   // if Punter wins they get Bet value added to there cash
                     myPunter[i].Cash += myPunter[i].Bet;
