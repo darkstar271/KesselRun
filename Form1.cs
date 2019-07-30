@@ -22,7 +22,7 @@ namespace KesselRun
         {
             SoundPlayer sn1Player = new SoundPlayer(Resource1.Game_over3);
             sn1Player.Play();
-            sn1Player.Dispose();
+            // sn1Player.Dispose();
         }
 
         private BettingDetails bettingDetails;
@@ -34,8 +34,9 @@ namespace KesselRun
         private int ShipWinner;
         public Form1()
         {
-            ships = new Ships[4];
+
             InitializeComponent();
+            ships = new Ships[4];
             bettingDetails = new BettingDetails();
             LoadShips();
             LoadPunters();
@@ -57,12 +58,18 @@ namespace KesselRun
             NewGameReset();
             splitContainer1.Panel1.BackgroundImage = (Resource1.starry_sky_night_stars_115042_1920x1080);
             splitContainer1.Panel1.BackgroundImageLayout = ImageLayout.Tile;
+
             bettingDetails.AllBusted[0] = true;
             bettingDetails.AllBusted[1] = true;
             bettingDetails.AllBusted[2] = true;
             bettingDetails.AllBusted[3] = true;
+
             lblWagerName.Text = "";
             lblWinner.Text = "";
+            lblCreedoCash.Text = "";
+            lblJubbaCash.Text = "";
+            lblSnokeCash.Text = "";
+            lblWattoCash.Text = "";
         }
         // this is a fake button and switch for all buttons
         #region Buttons & switch method
@@ -351,7 +358,7 @@ namespace KesselRun
                 CashCheck();
                 bettingDetails.CheckDead(bettingDetails.AllBusted);
                 // This is part of what happens if all of the Punters are busted, as each Punter loses, a value is changed in the ALLBusted List, CheckDead is part of this
-                //  
+
                 EndGame();
                 // update Punter Cash
                 //myPunter[i] = Factory.GetAPunter(i);
